@@ -1,0 +1,313 @@
+{
+  "version": "pilot-2",
+  "rivers": [
+    {
+      "river_id": "fraser",
+      "name": "Fraser",
+      "jurisdiction": "CA-BC",
+      "receiving_region": "Strait of Georgia",
+      "mouths": [
+        {
+          "mouth_id": "fraser-gazetteer",
+          "latitude": 49.11833333333333,
+          "longitude": -123.19083333333333,
+          "source": "https://apps.gov.bc.ca/pub/bcgnws/names/48556.html",
+          "geometry_role": "approximate gazetteer mouth",
+          "accuracy": "approximate; not complete distributary inventory",
+          "accessed": "2026-10-15"
+        }
+      ],
+      "mouth_status": "source-backed approximate references; topology validation pending; distributary allocation unknown",
+      "catchment_geometry": null,
+      "catchment_area_km2": null,
+      "regulation": null,
+      "regulation_changes": [],
+      "representation": "representative_gauge_proxy",
+      "allocation": null,
+      "stations": [
+        {
+          "station_id": "08MF005",
+          "provider": "wsc",
+          "valid_from": "2009-01-01",
+          "valid_to": null,
+          "rationale": "Major long-term upstream mainstem proxy at Hope; excludes lower tributaries and tidal distributaries.",
+          "verified_at": "2026-10-15T15:56:59.508462+00:00",
+          "metadata_source": "https://api.weather.gc.ca/collections/hydrometric-stations/items?f=json&STATION_NUMBER=08MF005&limit=100",
+          "metadata_release": "44984cabfc843ae84a52da15c27942089b54722ce60d9c38b0084584e0ffcf17",
+          "name": "FRASER RIVER AT HOPE",
+          "geometry": {
+            "coordinates": [
+              -121.45423889160156,
+              49.38595962524414
+            ],
+            "type": "Point"
+          },
+          "drainage_area_native": 216600.0,
+          "drainage_area_unit": "km2",
+          "station_timezone": null,
+          "uses_daylight_savings": null
+        }
+      ],
+      "selection_version": "pilot-1"
+    },
+    {
+      "river_id": "skagit",
+      "name": "Skagit",
+      "jurisdiction": "US-WA",
+      "receiving_region": "Skagit Bay",
+      "mouths": [
+        {
+          "mouth_id": "1523841",
+          "longitude": -122.49795660962523,
+          "latitude": 48.370108337285025,
+          "source": "https://carto.nationalmap.gov/arcgis/rest/services/geonames/MapServer/6",
+          "source_feature_id": 1523841,
+          "geometry_role": "gazetteer mouth reference; first coastal point in multipoint feature",
+          "accuracy": "approximate; requires water-mask snap validation",
+          "accessed": "2026-10-15"
+        },
+        {
+          "mouth_id": "1508543",
+          "longitude": -122.34906067611094,
+          "latitude": 48.33871925205717,
+          "source": "https://carto.nationalmap.gov/arcgis/rest/services/geonames/MapServer/6",
+          "source_feature_id": 1508543,
+          "geometry_role": "gazetteer mouth reference; first coastal point in multipoint feature",
+          "accuracy": "approximate; requires water-mask snap validation",
+          "accessed": "2026-10-15"
+        }
+      ],
+      "mouth_status": "source-backed approximate references; topology validation pending; distributary allocation unknown",
+      "catchment_geometry": null,
+      "catchment_area_km2": null,
+      "regulation": null,
+      "regulation_changes": [],
+      "representation": "representative_gauge_proxy",
+      "allocation": null,
+      "stations": [
+        {
+          "station_id": "USGS-12200500",
+          "provider": "usgs",
+          "valid_from": "2009-01-01",
+          "valid_to": null,
+          "rationale": "Mainstem at Mount Vernon; upstream of delta distributaries.",
+          "verified_at": "2026-10-15T15:57:03.691253+00:00",
+          "metadata_source": "https://api.waterdata.usgs.gov/ogcapi/v1/collections/monitoring-locations/items?f=json&id=USGS-12200500&limit=100",
+          "metadata_release": "fdfd606cb9b91b71d6db351a63b76a627ca83ad70edfac553758ef96d4f136d7",
+          "name": "SKAGIT RIVER NEAR MOUNT VERNON, WA",
+          "geometry": {
+            "coordinates": [
+              -122.335436945452,
+              48.4448278183877
+            ],
+            "type": "Point"
+          },
+          "drainage_area_native": 3093.0,
+          "drainage_area_unit": "mi2",
+          "station_timezone": "PST",
+          "uses_daylight_savings": "Y"
+        }
+      ],
+      "selection_version": "pilot-1"
+    },
+    {
+      "river_id": "snohomish",
+      "name": "Snohomish",
+      "jurisdiction": "US-WA",
+      "receiving_region": "Possession Sound",
+      "mouths": [
+        {
+          "mouth_id": "1508473",
+          "longitude": -122.20848547415406,
+          "latitude": 48.021212751994575,
+          "source": "https://carto.nationalmap.gov/arcgis/rest/services/geonames/MapServer/6",
+          "source_feature_id": 1508473,
+          "geometry_role": "gazetteer mouth reference; first coastal point in multipoint feature",
+          "accuracy": "approximate; requires water-mask snap validation",
+          "accessed": "2026-10-15"
+        }
+      ],
+      "mouth_status": "source-backed approximate references; topology validation pending; distributary allocation unknown",
+      "catchment_geometry": null,
+      "catchment_area_km2": null,
+      "regulation": null,
+      "regulation_changes": [],
+      "representation": "representative_gauge_proxy",
+      "allocation": null,
+      "stations": [
+        {
+          "station_id": "USGS-12150800",
+          "provider": "usgs",
+          "valid_from": "2009-01-01",
+          "valid_to": null,
+          "rationale": "Mainstem near Monroe; excludes downstream inflows and tidal delta.",
+          "verified_at": "2026-10-15T15:57:17.350473+00:00",
+          "metadata_source": "https://api.waterdata.usgs.gov/ogcapi/v1/collections/monitoring-locations/items?f=json&id=USGS-12150800&limit=100",
+          "metadata_release": "be03eb893eff97fe9f717b370761c0d9ec9ba0fef39879a48d3f6d46049490e5",
+          "name": "SNOHOMISH RIVER NEAR MONROE, WA",
+          "geometry": {
+            "coordinates": [
+              -122.048459102008,
+              47.8309320474433
+            ],
+            "type": "Point"
+          },
+          "drainage_area_native": 1537.0,
+          "drainage_area_unit": "mi2",
+          "station_timezone": "PST",
+          "uses_daylight_savings": "Y"
+        }
+      ],
+      "selection_version": "pilot-1"
+    },
+    {
+      "river_id": "nooksack",
+      "name": "Nooksack",
+      "jurisdiction": "US-WA",
+      "receiving_region": "Bellingham Bay",
+      "mouths": [
+        {
+          "mouth_id": "1523714",
+          "longitude": -122.59907902870728,
+          "latitude": 48.774836045534116,
+          "source": "https://carto.nationalmap.gov/arcgis/rest/services/geonames/MapServer/6",
+          "source_feature_id": 1523714,
+          "geometry_role": "gazetteer mouth reference; first coastal point in multipoint feature",
+          "accuracy": "approximate; requires water-mask snap validation",
+          "accessed": "2026-10-15"
+        }
+      ],
+      "mouth_status": "source-backed approximate references; topology validation pending; distributary allocation unknown",
+      "catchment_geometry": null,
+      "catchment_area_km2": null,
+      "regulation": null,
+      "regulation_changes": [],
+      "representation": "representative_gauge_proxy",
+      "allocation": null,
+      "stations": [
+        {
+          "station_id": "USGS-12213100",
+          "provider": "usgs",
+          "valid_from": "2009-01-01",
+          "valid_to": null,
+          "rationale": "Mainstem at Ferndale; no drainage-area scaling to mouth.",
+          "verified_at": "2026-10-15T15:57:31.395899+00:00",
+          "metadata_source": "https://api.waterdata.usgs.gov/ogcapi/v1/collections/monitoring-locations/items?f=json&id=USGS-12213100&limit=100",
+          "metadata_release": "7fa7ffc8302b393e6222599c8977d4646ee2bbdf024ec702b055d45b0b7c767f",
+          "name": "NOOKSACK RIVER AT FERNDALE, WA",
+          "geometry": {
+            "coordinates": [
+              -122.58931412266325,
+              48.84479237495502
+            ],
+            "type": "Point"
+          },
+          "drainage_area_native": 786.0,
+          "drainage_area_unit": "mi2",
+          "station_timezone": "PST",
+          "uses_daylight_savings": "Y"
+        }
+      ],
+      "selection_version": "pilot-1"
+    },
+    {
+      "river_id": "cowichan",
+      "name": "Cowichan",
+      "jurisdiction": "CA-BC",
+      "receiving_region": "Cowichan Bay",
+      "mouths": [
+        {
+          "mouth_id": "cowichan-gazetteer",
+          "latitude": 48.753055555555555,
+          "longitude": -123.63666666666667,
+          "source": "https://apps.gov.bc.ca/pub/bcgnws/names/4085.html",
+          "geometry_role": "approximate gazetteer mouth",
+          "accuracy": "approximate; not complete distributary inventory",
+          "accessed": "2026-10-15"
+        }
+      ],
+      "mouth_status": "source-backed approximate references; topology validation pending; distributary allocation unknown",
+      "catchment_geometry": null,
+      "catchment_area_km2": null,
+      "regulation": null,
+      "regulation_changes": [],
+      "representation": "representative_gauge_proxy",
+      "allocation": null,
+      "stations": [
+        {
+          "station_id": "08HA011",
+          "provider": "wsc",
+          "valid_from": "2009-01-01",
+          "valid_to": null,
+          "rationale": "Near Duncan mainstem proxy; not an estimate of all estuarine inflows.",
+          "verified_at": "2026-10-15T15:57:44.954443+00:00",
+          "metadata_source": "https://api.weather.gc.ca/collections/hydrometric-stations/items?f=json&STATION_NUMBER=08HA011&limit=100",
+          "metadata_release": "3ab7ac63b86b94dc591e8bc91cbaf5915ab9626d99ed32da270ee26a9676db4f",
+          "name": "COWICHAN RIVER NEAR DUNCAN",
+          "geometry": {
+            "coordinates": [
+              -123.71446990966795,
+              48.77307891845703
+            ],
+            "type": "Point"
+          },
+          "drainage_area_native": 825.7000122070312,
+          "drainage_area_unit": "km2",
+          "station_timezone": null,
+          "uses_daylight_savings": null
+        }
+      ],
+      "selection_version": "pilot-1"
+    },
+    {
+      "river_id": "columbia",
+      "name": "Columbia",
+      "jurisdiction": "US-OR/WA",
+      "receiving_region": "Columbia estuary",
+      "mouths": [
+        {
+          "mouth_id": "1140014",
+          "longitude": -124.05794474703497,
+          "latitude": 46.24427265981712,
+          "source": "https://carto.nationalmap.gov/arcgis/rest/services/geonames/MapServer/6",
+          "source_feature_id": 1140014,
+          "geometry_role": "gazetteer mouth reference; first coastal point in multipoint feature",
+          "accuracy": "approximate; requires water-mask snap validation",
+          "accessed": "2026-10-15"
+        }
+      ],
+      "mouth_status": "source-backed approximate references; topology validation pending; distributary allocation unknown",
+      "catchment_geometry": null,
+      "catchment_area_km2": null,
+      "regulation": null,
+      "regulation_changes": [],
+      "representation": "representative_gauge_proxy",
+      "allocation": null,
+      "stations": [
+        {
+          "station_id": "USGS-14105700",
+          "provider": "usgs",
+          "valid_from": "2009-01-01",
+          "valid_to": null,
+          "rationale": "The Dalles mainstem long record and temperature; far upstream, excludes lower tributaries. Strongly regulated flow; not mouth discharge.",
+          "verified_at": "2026-10-15T15:57:48.826769+00:00",
+          "metadata_source": "https://api.waterdata.usgs.gov/ogcapi/v1/collections/monitoring-locations/items?f=json&id=USGS-14105700&limit=100",
+          "metadata_release": "90e0893d6a59bcfd17e9268d99371060a90df0b10f35813d8a125cfa32876220",
+          "name": "COLUMBIA RIVER AT THE DALLES, OR",
+          "geometry": {
+            "coordinates": [
+              -121.189916666667,
+              45.6082777777778
+            ],
+            "type": "Point"
+          },
+          "drainage_area_native": 237000.0,
+          "drainage_area_unit": "mi2",
+          "station_timezone": "PST",
+          "uses_daylight_savings": "Y"
+        }
+      ],
+      "selection_version": "pilot-1"
+    }
+  ]
+}
