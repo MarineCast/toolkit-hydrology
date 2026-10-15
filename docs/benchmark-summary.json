@@ -1,0 +1,293 @@
+{
+  "cold": {
+    "release_path": "data/benchmark-cold/498eff25536aea69ad78",
+    "schema_version": "1",
+    "software_version": "0.1.0",
+    "implementation_hash": "5ce37afbab976971e0d759fc8133fdecfd04855c71faa61fe137967fbdb99c94",
+    "release": "498eff25536aea69ad78",
+    "config": {
+      "start_date": "2023-01-01",
+      "end_date": "2023-03-31",
+      "bbox": null,
+      "rivers": [
+        "fraser",
+        "skagit",
+        "snohomish",
+        "nooksack",
+        "cowichan",
+        "columbia"
+      ],
+      "stations": null,
+      "data_source": "auto",
+      "cache": "data/benchmark-cache",
+      "output": "data/benchmark-cold",
+      "registry": null,
+      "h3_res": 6,
+      "timeout": 45,
+      "retries": 3,
+      "rate_seconds": 1.0,
+      "workers": 1,
+      "refresh": false,
+      "allow_provisional": false,
+      "as_of": null,
+      "temporal_requirement": "provider_daily",
+      "hydat": null,
+      "climatology": null,
+      "water_mask": null,
+      "water_mask_version": null,
+      "receiving_regions": null,
+      "low_flow_threshold": 10.0,
+      "pulse_threshold": 1000.0,
+      "max_hold_seconds": 3600,
+      "minimum_coverage": 0.9,
+      "max_snap_m": 3000
+    },
+    "outcomes": {
+      "fraser": {
+        "discharge_mean": "observed",
+        "temperature_mean": "unsupported: WSC HYDAT does not provide water temperature",
+        "temperature_max": "unsupported: WSC HYDAT does not provide water temperature"
+      },
+      "skagit": {
+        "discharge_mean": "observed",
+        "temperature_mean": "observed",
+        "temperature_max": "observed"
+      },
+      "snohomish": {
+        "discharge_mean": "observed",
+        "temperature_mean": "no_observations",
+        "temperature_max": "no_observations"
+      },
+      "nooksack": {
+        "discharge_mean": "observed",
+        "temperature_mean": "observed",
+        "temperature_max": "observed"
+      },
+      "cowichan": {
+        "discharge_mean": "observed",
+        "temperature_mean": "unsupported: WSC HYDAT does not provide water temperature",
+        "temperature_max": "unsupported: WSC HYDAT does not provide water temperature"
+      },
+      "columbia": {
+        "discharge_mean": "observed",
+        "temperature_mean": "observed",
+        "temperature_max": "observed"
+      }
+    },
+    "failures": {},
+    "spatial_error": null,
+    "complete": true,
+    "native_rows": 1080,
+    "h3_rows": 0,
+    "historical_availability": "unknown; not an exact operational backtest",
+    "timing_seconds": {
+      "acquisition": 62.90707987500355,
+      "features_and_selection": 0.20617845910601318,
+      "spatial_and_write": 0.09593708300963044,
+      "total": 63.20919541711919
+    },
+    "network": {
+      "http_requests": 66,
+      "cache_hits": 0
+    },
+    "hardware": "macOS-26.6.2-arm64-arm-64bit arm64",
+    "peak_rss_platform_units": 120733696,
+    "bytes": 305520,
+    "files": {
+      "coverage.parquet": "2dbd809f0006f1b1375a0d4988ad711874106a5f1e9c04d80318990a0d2510ec",
+      "registry.json": "ed4363cc01023e4a42154f6adfa6f5c599bdceb760f6aafb7162f0ac801c3005",
+      "river_conditions.parquet": "da8ff302bf70fdee5607a9b1a01c869b3c38c70c5aec47298816f97435d8d07c",
+      "station_observations.parquet": "5e027771cf755fdd511deab32538a5ace57fb792683dc01024d87c363a30065a",
+      "station_registry.parquet": "56565d215d98f8b8bd65f741e8880ce1ecd292479a94db8b9122fc4e71acf506",
+      "station_metadata.json": "d2ceafd21d88518df20a32273084beadd6692865aa8b23a6e33e41cb0b2902c4",
+      "river_registry.parquet": "e65fbd7bccb34f4479874d2f6d0c97153994cb121797e3e7505ea7d03c83647d",
+      "river_features.parquet": "45e8fb4b055ce6fb234c3ae83da02a2c40bedb0ccee00c7a9b221e127ea5e524"
+    }
+  },
+  "warm": {
+    "release_path": "data/benchmark-warm/d8af2e81e159ec2a4c7a",
+    "schema_version": "1",
+    "software_version": "0.1.0",
+    "implementation_hash": "b59cfad4395f2370abf46ca3823e140d459e59da19e576b27b9d08b87abb444b",
+    "release": "d8af2e81e159ec2a4c7a",
+    "config": {
+      "start_date": "2023-01-01",
+      "end_date": "2023-03-31",
+      "bbox": null,
+      "rivers": [
+        "fraser",
+        "skagit",
+        "snohomish",
+        "nooksack",
+        "cowichan",
+        "columbia"
+      ],
+      "stations": null,
+      "data_source": "auto",
+      "cache": "data/benchmark-cache",
+      "output": "data/benchmark-warm",
+      "registry": null,
+      "h3_res": 6,
+      "timeout": 45,
+      "retries": 3,
+      "rate_seconds": 1.0,
+      "workers": 1,
+      "refresh": false,
+      "allow_provisional": false,
+      "as_of": null,
+      "temporal_requirement": "provider_daily",
+      "hydat": null,
+      "climatology": null,
+      "water_mask": null,
+      "water_mask_version": null,
+      "receiving_regions": null,
+      "low_flow_threshold": 10.0,
+      "pulse_threshold": 1000.0,
+      "max_hold_seconds": 3600,
+      "minimum_coverage": 0.9,
+      "max_snap_m": 3000
+    },
+    "outcomes": {
+      "fraser": {
+        "discharge_mean": "observed",
+        "temperature_mean": "unsupported: WSC HYDAT does not provide water temperature",
+        "temperature_max": "unsupported: WSC HYDAT does not provide water temperature"
+      },
+      "skagit": {
+        "discharge_mean": "observed",
+        "temperature_mean": "observed",
+        "temperature_max": "observed"
+      },
+      "snohomish": {
+        "discharge_mean": "observed",
+        "temperature_mean": "no_observations",
+        "temperature_max": "no_observations"
+      },
+      "nooksack": {
+        "discharge_mean": "observed",
+        "temperature_mean": "observed",
+        "temperature_max": "observed"
+      },
+      "cowichan": {
+        "discharge_mean": "observed",
+        "temperature_mean": "unsupported: WSC HYDAT does not provide water temperature",
+        "temperature_max": "unsupported: WSC HYDAT does not provide water temperature"
+      },
+      "columbia": {
+        "discharge_mean": "observed",
+        "temperature_mean": "observed",
+        "temperature_max": "observed"
+      }
+    },
+    "failures": {},
+    "spatial_error": null,
+    "complete": true,
+    "native_rows": 1080,
+    "h3_rows": 0,
+    "historical_availability": "unknown; not an exact operational backtest",
+    "timing_seconds": {
+      "acquisition": 0.24310679198242724,
+      "features_and_selection": 0.20076670800335705,
+      "spatial_and_write": 0.07879741699434817,
+      "total": 0.5226709169801325
+    },
+    "network": {
+      "http_requests": 0,
+      "cache_hits": 66
+    },
+    "hardware": "macOS-26.6.2-arm64-arm-64bit arm64",
+    "peak_rss_platform_units": 141492224,
+    "bytes": 305520,
+    "files": {
+      "coverage.parquet": "2dbd809f0006f1b1375a0d4988ad711874106a5f1e9c04d80318990a0d2510ec",
+      "registry.json": "ed4363cc01023e4a42154f6adfa6f5c599bdceb760f6aafb7162f0ac801c3005",
+      "river_conditions.parquet": "da8ff302bf70fdee5607a9b1a01c869b3c38c70c5aec47298816f97435d8d07c",
+      "station_observations.parquet": "5e027771cf755fdd511deab32538a5ace57fb792683dc01024d87c363a30065a",
+      "station_registry.parquet": "56565d215d98f8b8bd65f741e8880ce1ecd292479a94db8b9122fc4e71acf506",
+      "station_metadata.json": "d2ceafd21d88518df20a32273084beadd6692865aa8b23a6e33e41cb0b2902c4",
+      "river_registry.parquet": "e65fbd7bccb34f4479874d2f6d0c97153994cb121797e3e7505ea7d03c83647d",
+      "river_features.parquet": "45e8fb4b055ce6fb234c3ae83da02a2c40bedb0ccee00c7a9b221e127ea5e524"
+    }
+  },
+  "utc": {
+    "release_path": "data/validated-utc/6e434228ce02b3e8df96",
+    "schema_version": "1",
+    "software_version": "0.1.0",
+    "implementation_hash": "b59cfad4395f2370abf46ca3823e140d459e59da19e576b27b9d08b87abb444b",
+    "release": "6e434228ce02b3e8df96",
+    "config": {
+      "start_date": "2023-01-01",
+      "end_date": "2023-01-03",
+      "bbox": null,
+      "rivers": [
+        "columbia"
+      ],
+      "stations": null,
+      "data_source": "auto",
+      "cache": "data/cache",
+      "output": "data/validated-utc",
+      "registry": null,
+      "h3_res": 6,
+      "timeout": 45,
+      "retries": 3,
+      "rate_seconds": 1.0,
+      "workers": 1,
+      "refresh": false,
+      "allow_provisional": false,
+      "as_of": null,
+      "temporal_requirement": "utc_daily",
+      "hydat": null,
+      "climatology": null,
+      "water_mask": null,
+      "water_mask_version": null,
+      "receiving_regions": null,
+      "low_flow_threshold": 10.0,
+      "pulse_threshold": 1000.0,
+      "max_hold_seconds": 3600,
+      "minimum_coverage": 0.9,
+      "max_snap_m": 3000
+    },
+    "outcomes": {
+      "columbia": {
+        "discharge_mean": "observed",
+        "temperature_mean": "observed",
+        "temperature_max": "observed"
+      }
+    },
+    "failures": {},
+    "spatial_error": null,
+    "complete": true,
+    "native_rows": 9,
+    "h3_rows": 0,
+    "historical_availability": "unknown; not an exact operational backtest",
+    "timing_seconds": {
+      "acquisition": 0.5460470002144575,
+      "features_and_selection": 0.023989124922081828,
+      "spatial_and_write": 0.0367747088894248,
+      "total": 0.6068108340259641
+    },
+    "network": {
+      "http_requests": 0,
+      "cache_hits": 8
+    },
+    "hardware": "macOS-26.6.2-arm64-arm-64bit arm64",
+    "peak_rss_platform_units": 138133504,
+    "bytes": 109175,
+    "files": {
+      "coverage.parquet": "6219c753109d3b0d36ba98ff714414dc336bb0b1d19d4b3bd8b1711f486b5138",
+      "registry.json": "b168fba248cf286de3e9f3757389cc27ae7ff95a2a8b559994991c338fd115a1",
+      "river_conditions.parquet": "1b0ce50d077e625564fa9e2d2513d6629e3a3bd3551e880efdee431bbc6ee289",
+      "station_observations.parquet": "050d061ca0c3ba8ea3f5852876c637e0437c5796f599e6f6a10cb223122a4a4e",
+      "station_registry.parquet": "6bf363a84d45806a1299f447e5ee55cfd8d6d464fe637ab0fe9cfb192c3b913e",
+      "station_metadata.json": "b9f76a571c3f355cc6c2c58a0c9331fccfc1b618cd32cd7166fe03ddd13fb415",
+      "river_registry.parquet": "e89bd54e0c1104995f2d1c0df527233997ebc2a727e9b3f4d0cdcd124bcecfb0",
+      "river_features.parquet": "329bfc06df0afde356d4aa3b5975278941186fe7258c9e12f5faf1daaed99a92"
+    }
+  },
+  "synthetic_spatial": {
+    "fixture_only": true,
+    "rows": 22,
+    "cold_seconds": 0.06937537482008338,
+    "warm_seconds": 0.05864016595296562
+  }
+}

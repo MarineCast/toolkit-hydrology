@@ -1,0 +1,10 @@
+{
+  "start_date": "2023-01-01",
+  "end_date": "2023-03-31",
+  "rivers": ["fraser", "skagit", "snohomish", "nooksack", "cowichan", "columbia"],
+  "h3_res": 6,
+  "workers": 1,
+  "cache": "data/cache",
+  "output": "data/releases",
+  "temporal_requirement": "provider_daily"
+}
