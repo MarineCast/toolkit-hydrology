@@ -43,8 +43,11 @@ Official documentation and bounded API responses consulted **2026-10-15**:
   water-supported path and remains unvalidated on production geometry.
 
 Station metadata and response hashes are saved with every release; the packaged
-registry contains the six verified station names, coordinates, drainage areas and
-metadata URLs. Raw source responses are retained in the ignored content cache.
+registry contains the ten verified station names, coordinates, drainage areas and
+metadata URLs. Release builds retain raw responses in their ignored content cache;
+canonical per-river publication preserves normalized observations, discovered metadata
+and response hashes, then removes only its owned HTTP downloads after validated,
+execution-complete publication. Failed/deferred downloads remain resumable.
 Official metadata support the station identity, not a claim that gauge discharge
 represents the full coastal freshwater flux. Selection rationale is explicit.
 Catchment polygons and dated regulation histories were not available in this workspace;
@@ -56,3 +59,61 @@ No Ecology, BC temperature, or DART provider is claimed as implemented. Their re
 need a separate station/temporal-support review for the Canadian and Snohomish gaps.
 No modeled discharge fallback is used. Follow the linked providers' data-use terms
 before redistributing raw records; this repository stores code and metadata only.
+
+
+### Wateroffice daily CSV qualification — 2026-10-16
+
+The first collection additionally qualified official
+[Wateroffice CSV services](https://wateroffice.ec.gc.ca/services/index_e.html):
+historical `daily_data/csv/inline` with `parameters[]=flow`, and real-time daily means
+with parameter 6. These were narrow Fraser/Cowichan station/range requests, not a
+nationwide HYDAT download. The run-scoped adapter is retained with the collection
+evidence; the package's default WSC adapter still uses GeoMet. Its parser/schema,
+parameter/station/date/finite checks and nonnull source precedence were tested before
+use. Exact CSV bytes are SHA256-cached alongside request metadata.
+
+Precedence was nonnull retained GeoMet, then nonnull historical Wateroffice, then
+provisional Wateroffice daily means. Every original nonnull value was preserved and
+all returned source series/flags retained. Provider daily timestamp labels (including
+08:00Z real-time labels), approval/qualifier/symbol/grade fields and unknown averaging
+bounds remain explicit. They are provider daily means, never UTC reconstructions.
+The service documents 60 months for daily means and 18 for unit values; that does
+not establish station-specific coverage. Current products' actual gaps are authoritative.
+
+
+### Four additional US river gauges — 2026-10-20
+
+| River | USGS station | Native daily discharge metadata begins | Gauge support |
+| --- | --- | --- | --- |
+| Puyallup | 12101500 | 1914-05-01 | 948 mi²; river mile 6.6, above estuary |
+| Elwha | 12045500 | 1897-10-01 | 269 mi²; river mile 8.6, above Little River; dam-removal history matters |
+| Skokomish | 12061500 | 1943-07-01 | 227 mi² nominal; river mile 5.3, below fork confluence; Cushman diversion/regulation affects area interpretation |
+| Queets | 12040500 | 1930-10-01 | 445 mi²; river mile 4.6, below Clearwater River |
+
+Official monitoring-location and time-series metadata, and the USGS National Map
+GNIS stream gazetteer, were inspected on the review date. Native daily parameter
+00060/statistic 00003 metadata continued through 2026-10-18. Station-specific URLs,
+coordinates, source response hashes and selection rationale are in the packaged
+registry; acquisition retains discovered metadata and observation provenance.
+The four gauges have no qualified native daily 00010 mean/max series. They are
+explicitly unsupported for those variables until reviewed source curation changes.
+An unrelated nearby gauge or diversion canal is not a temperature substitute.
+
+Gazetteer first-coastal multipoint references are approximate mouth positions, not
+surveyed estuarine boundaries. Duplicate gazetteer rows were identical and did not
+create multiple outlets. Native registry mouths remain distinct from modeled research
+outlet coordinates. Exact named basin bindings and R8 attachment qualifications
+are read from the checksum-pinned Seascape selected-outlet inventory; no sibling
+files, nearest-coordinate substitutions, flow allocation or route generation are used.
+Queets retains its recorded 75.9 m source-registration gap, R8 connection and
+unavailable R6 attachment. Physical mouth flux, transport and whale effects remain
+unqualified. The dated validation record reports actual acquired coverage separately
+from these period-of-record metadata.
+
+
+Measured requested-window coverage on 2026-10-20 (2009-01-01–2026-10-15): USGS
+12101500, 12045500 and 12040500 each supplied 6,497 observed native daily discharge
+values; 12061500 supplied 6,152 with 345 explicit source gaps. All four requests
+finished; execution completion is distinct from gap-free coverage. Unsupported
+temperature remains null/unavailable. Official source responses and qualifiers were
+preserved in normalized observations; no gauge was substituted or summed.

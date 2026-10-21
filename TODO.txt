@@ -1,0 +1,166 @@
+# Hydrology next actions
+
+Reviewed **2026-10-18** against current source, retained per-river manifests and dated
+validation records. Only unfinished work is listed below. Completed scopes and
+supporting evidence are recorded in the [TODO review](docs/VALIDATION.md#todo-review--2026-10-18).
+
+## Sources and coverage
+
+- Package the tested run-scoped Wateroffice daily CSV collector and its explicit
+  nonnull source precedence. The default WSC adapter still uses GeoMet and is not an
+  equivalent replay of the retained Canadian CSV-filled history. A default rerun must
+  not erase retained values or replace them with less complete source coverage.
+- Investigate official archived timestamped Canadian/unit-value records separately
+  from the completed provider-daily CSV qualification. GeoMet's recent retention
+  limit is not a universal archive limit; HYDAT daily means cannot reconstruct UTC.
+- Review and extend temperature source/station support, especially Fraser, Cowichan
+  and Snohomish, which are uncollected in the current product. Quantify the remaining
+  gaps in the collected Skagit, Nooksack and Columbia series. Native temperature
+  starts/ends do not establish gap-free coverage.
+- Approve coverage and maximum-gap acceptance for each intended analysis. The native
+  2009-01-01–2026-10-15 discharge inventory has 38,971/38,982 observed river-days and
+  11 explicit gaps; a retained calendar or interpolated derived metric is not proof
+  of complete observed coverage or model readiness.
+
+## Spatial and registry work
+
+- Review the explicit ten-river research outlet bindings now used by river influence,
+  downstream omissions, regulation, mouth/catchment area and nesting. Columbia's modeled
+  source is estuarine/upstream of its physical ocean mouth; physical flux remains unqualified.
+- Extend the pinned R8 relationship/R6 reporting adapter beyond the implemented
+  research influence product to a qualified shared water-graph/receiving-region path.
+  Preserve routes outside the reporting mask and requested-cell membership.
+  Validate real mouth snaps and narrow-channel resolution sensitivity.
+- Review regional river additions and downstream Columbia candidates before changing
+  the production registry. No automatic gauge substitution or nested/distributary sums.
+
+## Modeling and operations
+
+- Define training folds and fit seasonal climatology from sufficient eligible retained
+  history per fold; retain cutoff/baseline artifacts. No training climatology is fitted
+  in current metadata. Day-t summaries must respect issue-time support/availability;
+  revised extracts do not establish exact operational backtests. The full-history
+  P10/P90 indicators are retrospective and model-ineligible.
+- Validate added predictive value with blocked years beyond season/location baselines.
+  Hydrology associations are gauge proxies, not measured mouth flux/plumes/whale effects.
+- Benchmark and budget larger UTC/H3 acquisitions and processing separately from the
+  completed bounded native benchmark. Canonical staging budgets do not bound HTTP
+  download volume or establish full-history UTC/H3 runtime/memory requirements.
+- Add a cross-process provider/cache acquisition lock before parallel independent jobs;
+  publication locks coordinate only readers/writers of one destination, while HTTP
+  and acquisition-ledger locks are currently process-local.
+- Define an observed-data archive/freshness and recent-revision reconciliation policy,
+  including rights/redistribution review. The Explorer read-only adapter is implemented;
+  it does not establish historical operational availability or redistribution rights.
+
+## Constraints for future runs
+
+Choose explicit river/date windows and finite download, staging and runtime budgets
+for each new acquisition or expansion. Use one acquisition job per shared
+cache/provider, honor persisted Retry-After deadlines and check current quota.
+Preserve original observations, flags, lineage and the 11 source gaps. Interior
+interpolation is approved only for the retrospective P10/P90 calculations, not for
+rewriting observed flow or establishing coverage acceptance. Local atomic symlink
+promotion/advisory locks are validated on this macOS filesystem; other targets need
+their own checks. Existing unowned product directories still require an explicit
+migration and must never be overwritten.
+
+
+## Prioritized hydrology data gaps — planning request, 2026-10-18
+
+Planning assumption supplied for this assessment: discharge is the only confirmed
+production-ready measurement. This is not a new toolkit-wide readiness finding and
+does not mean the other variables are absent from every source adapter. Existing
+partial temperature collection and the coverage work above remain relevant.
+
+These priorities reflect proposed predictive relevance, availability and implementation
+effort. They are not measured SRKW feature-importance rankings. All items below are
+unfinished qualification/implementation work; no acquisition or source verification
+was performed when adding this planning material.
+
+| Missing or insufficiently qualified data | Example model variables | Potential value for SRKW modeling (hypothesis) | Priority |
+| --- | --- | --- | --- |
+| River water temperature | Mean/max temperature, thermal anomalies, warm-water duration | Salmon migration conditions and thermal stress | P0 |
+| Additional river and coastal inflows | Freshwater flow by outlet, watershed and receiving marine basin | More complete representation of freshwater entering whale habitat | P0 |
+| Watershed characteristics | Drainage area, elevation, glacier cover, upstream lake area, regulation status | Interpret and compare river discharge and runoff | P0 |
+| Snowpack and snowmelt | Snow water equivalent (SWE), snow depth, melt rate, snowmelt runoff | Spring freshet dynamics and possible leading indicators of river conditions | P1 |
+| Dam and reservoir operations | Outflow, spill, reservoir storage, release changes | Distinguish natural flow conditions from managed river flows | P1 |
+| Turbidity and sediment | Turbidity, suspended sediment concentration, sediment load | Possible proxy for sediment-rich freshwater inputs and plume conditions | P1 |
+| River water levels | Stage, maximum daily level, rapid stage changes | Flood conditions; potentially limited additional value beyond discharge | P2 |
+| Soil moisture and catchment runoff | Soil moisture, surface runoff, subsurface runoff | Antecedent wetness and potential leading indicators of discharge | P2 |
+| Water chemistry | Conductivity, dissolved oxygen, pH, nutrients | Freshwater quality and possible ecological stressors | P2 |
+| Groundwater and baseflow | Groundwater levels, baseflow contribution | Low-flow conditions and delayed watershed responses | P3 |
+
+### Candidate historical sources to qualify
+
+The following descriptions and archive dates are user-supplied research leads, not
+newly verified coverage claims. Check station/parameter-specific completeness across
+the intended 2009–2026 training period, bulk access, units, sampling cadence, source
+flags, gaps, revisions/availability and use rights. Overall archive dates do not
+establish usable coverage at each station. Retain observed versus modeled identity;
+do not turn discrete samples or unknown coverage into daily observations.
+
+- [ ] DFO Fraser River Environmental Watch: qualify Fraser temperature, including
+  Qualark. The supplied lead reports historical reference records extending to 1950;
+  published reports demonstrate observations, but bulk historical access needs
+  qualification. Assess salmon-related temperature features without assuming
+  complete station history.
+  https://www.pac.dfo-mpo.gc.ca/science/habitat/frw-rfo/reports-rapports/2026/2026-07-20-eng.html
+- [ ] Columbia River DART: assess river temperature, reservoir outflow/spill,
+  elevation, dissolved gas and turbidity. The supplied lead reports an overall
+  river-environment archive extending to 1949; establish actual parameter/station
+  coverage rather than applying that start date to every variable.
+  https://www.cbr.washington.edu/dart/overview
+- [ ] Washington Ecology Freshwater DataStream and Freshwater Information Network:
+  qualify streamflow, temperature, dissolved oxygen, pH and conductivity at monitored
+  stations, and distinguish historical discrete water-quality observations from
+  continuous series.
+  https://ecology.wa.gov/research-data/monitoring-assessment/water-quality-monitoring
+- [ ] Water Survey of Canada HYDAT: investigate historical water levels, discharge
+  and sediment access beyond real-time API retention. Qualify the reported archive
+  breadth separately for each station/parameter; daily means do not reconstruct UTC
+  unit-value observations.
+  https://www.canada.ca/en/environment-climate-change/services/water-overview/quantity/monitoring/survey/data-products-services/national-archive-hydat.html
+- [ ] BC Snow Survey and NRCS SNOTEL: inventory historical SWE and snow-depth records
+  and qualify station coverage and basin-level representation for snowpack features.
+  https://www2.gov.bc.ca/gov/content/environment/air-land-water/water/water-science-data/water-data-tools/snow-survey-data
+  https://www.nrcs.usda.gov/resources/data-and-reports/snow-and-climate-monitoring-predefined-reports-and-maps
+- [ ] NOAA National Water Model Retrospective: assess modeled streamflow and
+  hydrological land-surface variables in the US domain. The supplied lead gives
+  version 3.0 coverage as February 1979–January 2023; verify that window and plan
+  coverage beyond it. That version alone cannot establish a consistent 2009–2026
+  product. Keep modeled runoff distinct from gauge observations and qualify any
+  version/source combination explicitly.
+  https://registry.opendata.aws/nwm-archive/
+
+### Ungauged freshwater inputs and basin inventory
+
+- [ ] Inventory additional gauged rivers, coastal inflows and ungauged watersheds.
+  The existing ten-river scope does not establish complete freshwater representation
+  for the Salish Sea or outer coast. Review additions alongside the registry and
+  downstream/nesting constraints above; do not double-count gauges or distributaries.
+- [ ] Locate and check the primary PNNL Salish Sea Model description behind the
+  supplied comparison: 19 major gauged rivers, runoff from 45 additional watersheds,
+  and approximately 69% drainage-area coverage by gauges in its principal study
+  region. These figures are unverified planning context here, not MarineCast
+  coverage estimates; compare study footprints before using them.
+- [ ] Build a basin-level inventory with river/watershed identity, outlet, drainage
+  area, receiving marine region, observation coverage and whether inflow is observed
+  or modeled. Distinguish Strait of Georgia, Puget Sound, Juan de Fuca and outer-coast
+  freshwater forcing. Preserve source support and unknowns in each inventory field.
+- [ ] Qualify BC Freshwater Atlas and USGS hydrography products as foundational
+  watershed/outlet datasets, including geographic coverage, version and linkage to
+  the receiving-region and named-outlet registry.
+  https://www2.gov.bc.ca/gov/content/data/geographic-data-services/topographic-data/freshwater
+  https://www.usgs.gov/3d-hydrography-program/access-3dhp-data-products
+
+
+## Approved US expansion — 2026-10-20
+
+The four additional US registry entries, guarded canonical publication, bounded
+2009-01-01–2026-10-15 acquisition, ten-river influence rebuild and current Explorer
+readback are complete; see docs/VALIDATION.md for dated evidence. Skokomish retains
+345 source discharge gaps (6,152/6,497 observed days) and remains below the configured
+complete-coverage eligibility requirement. The other additions each have 6,497/6,497
+observed discharge days. Temperature remains unsupported for all four. Further river
+curation, Canadian CSV packaging and temperature extension remain separate work.

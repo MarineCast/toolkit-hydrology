@@ -215,7 +215,7 @@ def test_dst_offsets_and_duplicate_samples():
 
 
 def test_registry_requires_mouth_not_gauge():
-    assert len(load_registry()["rivers"]) == 6
+    assert len(load_registry()["rivers"]) == 10
     r = select_registry(Config(bbox=(-123.3, 49, -123, 49.2), rivers=("fraser",)))
     assert (
         r[0]["stations"][0]["geometry"]["coordinates"][0] > -123

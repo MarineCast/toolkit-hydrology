@@ -18,3 +18,17 @@ Final H3 products follow `final/static.parquet` (H3 × metric),
 Delete only build-owned HTTP downloads, and only after validating final files,
 catalog and saved release. Preserve failed-build downloads for resumption and never
 sweep shared caches or user-provided input files. Tests must cover cleanup boundaries.
+
+Canonical per-river `publish` uses a regular `Data/Hydrology` directory. It stages
+under `product_output.parent.parent/.marinecast-work/hydrology/<destination-hash>`
+and coordinates shared readers/exclusive writers there. It uses owned `downloads/`
+in that work area by default. Explicit `Config.cache` is an external work base
+with an owned child, preserving other files; legacy/native layouts remain separate. After validated,
+execution-complete publication, remove only those owned downloads, backup and
+candidates. Failed/deferred runs keep resumable inputs outside delivery. Recompute
+keeps no previous successful generations. Preserve final normalized observations,
+metadata, source hashes, units, support and missingness; do not restore symlinks.
+
+Existing-river publication must pass the non-decreasing observed-support guard:
+retain full history, observed variables and equivalent or improved per-day support.
+Never bypass it to refresh a smaller window or erase previously observed temperature.

@@ -7,6 +7,7 @@ import pytest
 
 from hydrology import pipeline
 from hydrology.core import Config
+from hydrology.pipelines import acquisition, releases
 from hydrology.providers import finalize, row
 from hydrology.registry import select_registry
 
@@ -44,7 +45,7 @@ def fake_acquire(config, metrics):
 
 
 def test_saved_repeat_immutable_and_validation(tmp_path, monkeypatch):
-    monkeypatch.setattr(pipeline, "acquire", fake_acquire)
+    monkeypatch.setattr(acquisition, "acquire", fake_acquire)
     c = Config(
         start_date="2023-01-01",
         end_date="2023-01-05",
@@ -65,7 +66,7 @@ def test_saved_repeat_immutable_and_validation(tmp_path, monkeypatch):
 
 
 def test_h3_failure_keeps_native_and_has_different_release(tmp_path, monkeypatch):
-    monkeypatch.setattr(pipeline, "acquire", fake_acquire)
+    monkeypatch.setattr(acquisition, "acquire", fake_acquire)
     c = Config(
         start_date="2023-01-01",
         end_date="2023-01-05",
@@ -153,8 +154,8 @@ def test_saved_h3_partition(tmp_path, monkeypatch, fail_stage):
         def broken_product(*args):
             raise ValueError("Synthetic final product validation failure")
 
-        monkeypatch.setattr(pipeline, "write_final", broken_product)
-    monkeypatch.setattr(pipeline, "acquire", utc)
+        monkeypatch.setattr(releases, "write_final", broken_product)
+    monkeypatch.setattr(acquisition, "acquire", utc)
     c = Config(
         start_date="2023-01-01",
         end_date="2023-01-05",

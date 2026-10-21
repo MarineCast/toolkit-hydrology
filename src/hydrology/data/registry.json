@@ -1,5 +1,5 @@
 {
-  "version": "pilot-2",
+  "version": "regional-us-20261020",
   "rivers": [
     {
       "river_id": "fraser",
@@ -308,6 +308,254 @@
         }
       ],
       "selection_version": "pilot-1"
+    },
+    {
+      "river_id": "puyallup",
+      "name": "Puyallup",
+      "jurisdiction": "US-WA",
+      "receiving_region": "Commencement Bay",
+      "mouths": [
+        {
+          "mouth_id": "1524711",
+          "longitude": -122.4284720292981,
+          "latitude": 47.26954918851874,
+          "source": "https://carto.nationalmap.gov/arcgis/rest/services/geonames/MapServer/6/query?f=json&where=gaz_id+IN+%281524711%2C1531449%2C1525867%2C1531493%29&outFields=gaz_id%2Cgaz_name%2Cstate_alpha&outSR=4326&returnGeometry=true",
+          "source_feature_id": 1524711,
+          "geometry_role": "gazetteer mouth reference; first coastal point in multipoint feature",
+          "accuracy": "approximate; not a surveyed marine boundary or distributary inventory",
+          "accessed": "2026-10-20"
+        }
+      ],
+      "mouth_status": "source-backed approximate reference; modeled research outlet separately bound; physical flux and delta allocation unqualified",
+      "catchment_geometry": null,
+      "catchment_area_km2": null,
+      "regulation": null,
+      "regulation_changes": [],
+      "representation": "representative_gauge_proxy",
+      "allocation": null,
+      "stations": [
+        {
+          "station_id": "USGS-12101500",
+          "provider": "usgs",
+          "valid_from": "1914-05-01",
+          "valid_to": null,
+          "rationale": "Lower mainstem at river mile 6.6; includes the White River upstream; excludes remaining downstream inflows and tidal estuary. Regulated watershed; no area scaling or mouth-flux inference.",
+          "verified_at": "2026-10-20T11:29:52.995949+00:00",
+          "metadata_source": "https://api.waterdata.usgs.gov/ogcapi/v1/collections/monitoring-locations/items?f=json&id=USGS-12101500&limit=1",
+          "metadata_release": "bfe2162d4e8ef788ac277add6448848128cd831391ca48eb698e92ba256ce6e5",
+          "name": "PUYALLUP RIVER AT PUYALLUP, WA",
+          "geometry": {
+            "type": "Point",
+            "coordinates": [
+              -122.327065234431,
+              47.208433578519
+            ]
+          },
+          "drainage_area_native": 948.0,
+          "drainage_area_unit": "mi2",
+          "station_timezone": "PST",
+          "uses_daylight_savings": "Y",
+          "unsupported_metrics": {
+            "temperature_mean": "No USGS native daily water-temperature mean/max series in the official time-series metadata reviewed 2026-10-20; leave unsupported until station curation is updated.",
+            "temperature_max": "No USGS native daily water-temperature mean/max series in the official time-series metadata reviewed 2026-10-20; leave unsupported until station curation is updated."
+          }
+        }
+      ],
+      "selection_version": "regional-us-20261020",
+      "research_outlet_binding": {
+        "name": "Puyallup River",
+        "outlet_id": "HYDRORIVERS_V10_70350974",
+        "binding_source_sha256": "177adcbbfc8962da0466d7697c434734b2413796f8fb4c3963e8cfc4dcf62a90",
+        "binding_kind": "source_linked_modeled_main_basin_outlet",
+        "model_eligible": false,
+        "physical_mouth_flux_qualified": false
+      }
+    },
+    {
+      "river_id": "elwha",
+      "name": "Elwha",
+      "jurisdiction": "US-WA",
+      "receiving_region": "Strait of Juan de Fuca",
+      "mouths": [
+        {
+          "mouth_id": "1531449",
+          "longitude": -123.55964992009392,
+          "latitude": 48.15065030703328,
+          "source": "https://carto.nationalmap.gov/arcgis/rest/services/geonames/MapServer/6/query?f=json&where=gaz_id+IN+%281524711%2C1531449%2C1525867%2C1531493%29&outFields=gaz_id%2Cgaz_name%2Cstate_alpha&outSR=4326&returnGeometry=true",
+          "source_feature_id": 1531449,
+          "geometry_role": "gazetteer mouth reference; first coastal point in multipoint feature",
+          "accuracy": "approximate; not a surveyed marine boundary or distributary inventory",
+          "accessed": "2026-10-20"
+        }
+      ],
+      "mouth_status": "source-backed approximate reference; modeled research outlet separately bound; physical flux and delta allocation unqualified",
+      "catchment_geometry": null,
+      "catchment_area_km2": null,
+      "regulation": null,
+      "regulation_changes": [],
+      "representation": "representative_gauge_proxy",
+      "allocation": null,
+      "stations": [
+        {
+          "station_id": "USGS-12045500",
+          "provider": "usgs",
+          "valid_from": "1897-10-01",
+          "valid_to": null,
+          "rationale": "Mainstem at river mile 8.6, above Little River; excludes downstream inflows. Dam-removal history affects interpretation; not mouth discharge.",
+          "verified_at": "2026-10-20T11:29:53.417802+00:00",
+          "metadata_source": "https://api.waterdata.usgs.gov/ogcapi/v1/collections/monitoring-locations/items?f=json&id=USGS-12045500&limit=1",
+          "metadata_release": "42ee22e5217f126cc81ccdb27647c2ec6a2b82442e10cea007235687aad6c4b0",
+          "name": "ELWHA RIVER AT MCDONALD BR NEAR PORT ANGELES, WA",
+          "geometry": {
+            "type": "Point",
+            "coordinates": [
+              -123.58321362238982,
+              48.05478017852923
+            ]
+          },
+          "drainage_area_native": 269.0,
+          "drainage_area_unit": "mi2",
+          "station_timezone": "PST",
+          "uses_daylight_savings": "Y",
+          "unsupported_metrics": {
+            "temperature_mean": "No USGS native daily water-temperature mean/max series in the official time-series metadata reviewed 2026-10-20; leave unsupported until station curation is updated.",
+            "temperature_max": "No USGS native daily water-temperature mean/max series in the official time-series metadata reviewed 2026-10-20; leave unsupported until station curation is updated."
+          }
+        }
+      ],
+      "selection_version": "regional-us-20261020",
+      "research_outlet_binding": {
+        "name": "Elwha River",
+        "outlet_id": "HYDRORIVERS_V10_70321298",
+        "binding_source_sha256": "177adcbbfc8962da0466d7697c434734b2413796f8fb4c3963e8cfc4dcf62a90",
+        "binding_kind": "source_linked_modeled_main_basin_outlet",
+        "model_eligible": false,
+        "physical_mouth_flux_qualified": false
+      }
+    },
+    {
+      "river_id": "skokomish",
+      "name": "Skokomish",
+      "jurisdiction": "US-WA",
+      "receiving_region": "Hood Canal",
+      "mouths": [
+        {
+          "mouth_id": "1525867",
+          "longitude": -123.1176690544846,
+          "latitude": 47.34009891655983,
+          "source": "https://carto.nationalmap.gov/arcgis/rest/services/geonames/MapServer/6/query?f=json&where=gaz_id+IN+%281524711%2C1531449%2C1525867%2C1531493%29&outFields=gaz_id%2Cgaz_name%2Cstate_alpha&outSR=4326&returnGeometry=true",
+          "source_feature_id": 1525867,
+          "geometry_role": "gazetteer mouth reference; first coastal point in multipoint feature",
+          "accuracy": "approximate; not a surveyed marine boundary or distributary inventory",
+          "accessed": "2026-10-20"
+        }
+      ],
+      "mouth_status": "source-backed approximate reference; modeled research outlet separately bound; physical flux and delta allocation unqualified",
+      "catchment_geometry": null,
+      "catchment_area_km2": null,
+      "regulation": null,
+      "regulation_changes": [],
+      "representation": "representative_gauge_proxy",
+      "allocation": null,
+      "stations": [
+        {
+          "station_id": "USGS-12061500",
+          "provider": "usgs",
+          "valid_from": "1943-07-01",
+          "valid_to": null,
+          "rationale": "Mainstem at river mile 5.3, below North/South Fork confluence. Cushman regulation and diversion affect gauged flow and nominal drainage area; not total basin runoff or mouth discharge.",
+          "verified_at": "2026-10-20T11:29:53.809310+00:00",
+          "metadata_source": "https://api.waterdata.usgs.gov/ogcapi/v1/collections/monitoring-locations/items?f=json&id=USGS-12061500&limit=1",
+          "metadata_release": "f0ecaeafef5e8578f3fa14d610c450d39e2f716f5e7cffe6e43303313ce0e888",
+          "name": "SKOKOMISH RIVER NEAR POTLATCH, WA",
+          "geometry": {
+            "type": "Point",
+            "coordinates": [
+              -123.177099471878,
+              47.3098151446522
+            ]
+          },
+          "drainage_area_native": 227.0,
+          "drainage_area_unit": "mi2",
+          "station_timezone": "PST",
+          "uses_daylight_savings": "Y",
+          "unsupported_metrics": {
+            "temperature_mean": "No USGS native daily water-temperature mean/max series in the official time-series metadata reviewed 2026-10-20; leave unsupported until station curation is updated.",
+            "temperature_max": "No USGS native daily water-temperature mean/max series in the official time-series metadata reviewed 2026-10-20; leave unsupported until station curation is updated."
+          }
+        }
+      ],
+      "selection_version": "regional-us-20261020",
+      "research_outlet_binding": {
+        "name": "Skokomish River",
+        "outlet_id": "HYDRORIVERS_V10_70349282",
+        "binding_source_sha256": "177adcbbfc8962da0466d7697c434734b2413796f8fb4c3963e8cfc4dcf62a90",
+        "binding_kind": "source_linked_modeled_main_basin_outlet",
+        "model_eligible": false,
+        "physical_mouth_flux_qualified": false
+      }
+    },
+    {
+      "river_id": "queets",
+      "name": "Queets",
+      "jurisdiction": "US-WA",
+      "receiving_region": "Pacific Ocean",
+      "mouths": [
+        {
+          "mouth_id": "1531493",
+          "longitude": -124.35603999220297,
+          "latitude": 47.54453019053229,
+          "source": "https://carto.nationalmap.gov/arcgis/rest/services/geonames/MapServer/6/query?f=json&where=gaz_id+IN+%281524711%2C1531449%2C1525867%2C1531493%29&outFields=gaz_id%2Cgaz_name%2Cstate_alpha&outSR=4326&returnGeometry=true",
+          "source_feature_id": 1531493,
+          "geometry_role": "gazetteer mouth reference; first coastal point in multipoint feature",
+          "accuracy": "approximate; not a surveyed marine boundary or distributary inventory",
+          "accessed": "2026-10-20"
+        }
+      ],
+      "mouth_status": "source-backed approximate reference; modeled research outlet separately bound; physical flux and delta allocation unqualified",
+      "catchment_geometry": null,
+      "catchment_area_km2": null,
+      "regulation": null,
+      "regulation_changes": [],
+      "representation": "representative_gauge_proxy",
+      "allocation": null,
+      "stations": [
+        {
+          "station_id": "USGS-12040500",
+          "provider": "usgs",
+          "valid_from": "1930-10-01",
+          "valid_to": null,
+          "rationale": "Lower mainstem at river mile 4.6, downstream of Clearwater River; excludes remaining estuarine inflows; not measured mouth flux.",
+          "verified_at": "2026-10-20T11:29:54.258170+00:00",
+          "metadata_source": "https://api.waterdata.usgs.gov/ogcapi/v1/collections/monitoring-locations/items?f=json&id=USGS-12040500&limit=1",
+          "metadata_release": "51ffc24b40789afb9e2372b62683a69f8d661ef1abc9d7256d23b14877c1abaf",
+          "name": "QUEETS RIVER NEAR CLEARWATER, WA",
+          "geometry": {
+            "type": "Point",
+            "coordinates": [
+              -124.3157227333905,
+              47.53782752368786
+            ]
+          },
+          "drainage_area_native": 445.0,
+          "drainage_area_unit": "mi2",
+          "station_timezone": "PST",
+          "uses_daylight_savings": "Y",
+          "unsupported_metrics": {
+            "temperature_mean": "No USGS native daily water-temperature mean/max series in the official time-series metadata reviewed 2026-10-20; leave unsupported until station curation is updated.",
+            "temperature_max": "No USGS native daily water-temperature mean/max series in the official time-series metadata reviewed 2026-10-20; leave unsupported until station curation is updated."
+          }
+        }
+      ],
+      "selection_version": "regional-us-20261020",
+      "research_outlet_binding": {
+        "name": "Queets River",
+        "outlet_id": "HYDRORIVERS_V10_70341239",
+        "binding_source_sha256": "177adcbbfc8962da0466d7697c434734b2413796f8fb4c3963e8cfc4dcf62a90",
+        "binding_kind": "source_linked_modeled_main_basin_outlet",
+        "model_eligible": false,
+        "physical_mouth_flux_qualified": false
+      }
     }
   ]
 }

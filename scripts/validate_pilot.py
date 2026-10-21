@@ -5,8 +5,9 @@ import time
 
 import pandas as pd
 
-from hydrology.core import Config, atomic_json
-from hydrology.pipeline import build, validate_release
+from hydrology import Config
+from hydrology.pipelines.releases import build, validate_release
+from hydrology.utils.io import atomic_json
 
 p = argparse.ArgumentParser()
 p.add_argument("--config", default="config/pilot.json")

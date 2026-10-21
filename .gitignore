@@ -8,3 +8,4 @@ data/
 !src/hydrology/data/
 !src/hydrology/data/*.json
 .env
+.DS_Store

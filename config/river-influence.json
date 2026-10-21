@@ -1,0 +1,138 @@
+{
+  "version": 1,
+  "hydrology": "../../../Data/Hydrology",
+  "study": "../../../config/study.v1.json",
+  "outlet_bindings": "../../toolkit-seascape/config/registries/selected-outlets.research.v1.json",
+  "output": "../../../Data/Hydrology/influence.parquet",
+  "rivers": {
+    "fraser": {
+      "name": "Fraser River",
+      "outlet_id": "HYDRORIVERS_V10_70283328",
+      "gain": 1
+    },
+    "cowichan": {
+      "name": "Cowichan River",
+      "outlet_id": "HYDRORIVERS_V10_70297057",
+      "gain": 1
+    },
+    "skagit": {
+      "name": "Skagit River",
+      "outlet_id": "HYDRORIVERS_V10_70310822",
+      "gain": 1
+    },
+    "snohomish": {
+      "name": "Snohomish River",
+      "outlet_id": "HYDRORIVERS_V10_70324935",
+      "gain": 1
+    },
+    "nooksack": {
+      "name": "Nooksack River",
+      "outlet_id": "HYDRORIVERS_V10_70296640",
+      "gain": 1
+    },
+    "columbia": {
+      "name": "Columbia River",
+      "outlet_id": "HYDRORIVERS_V10_70386275",
+      "gain": 1
+    },
+    "puyallup": {
+      "name": "Puyallup River",
+      "outlet_id": "HYDRORIVERS_V10_70350974",
+      "gain": 1
+    },
+    "elwha": {
+      "name": "Elwha River",
+      "outlet_id": "HYDRORIVERS_V10_70321298",
+      "gain": 1
+    },
+    "skokomish": {
+      "name": "Skokomish River",
+      "outlet_id": "HYDRORIVERS_V10_70349282",
+      "gain": 1
+    },
+    "queets": {
+      "name": "Queets River",
+      "outlet_id": "HYDRORIVERS_V10_70341239",
+      "gain": 1
+    }
+  },
+  "distance_profiles": [
+    {
+      "id": "local",
+      "label": "Local \u00b7 20 km decay",
+      "kind": "exponential",
+      "scale_km": 20,
+      "peak_km": 0,
+      "cutoff_km": 250
+    },
+    {
+      "id": "broad",
+      "label": "Broad \u00b7 50 km decay",
+      "kind": "exponential",
+      "scale_km": 50,
+      "peak_km": 0,
+      "cutoff_km": 250
+    },
+    {
+      "id": "offshore",
+      "label": "Offshore \u00b7 peak at 20 km",
+      "kind": "gaussian",
+      "scale_km": 20,
+      "peak_km": 20,
+      "cutoff_km": 250
+    }
+  ],
+  "lag_profiles": [
+    {
+      "id": "same-day",
+      "label": "Same provider day",
+      "weights": [
+        {
+          "days": 0,
+          "weight": 1
+        }
+      ]
+    },
+    {
+      "id": "three-day",
+      "label": "Around 3 days later",
+      "weights": [
+        {
+          "days": 2,
+          "weight": 1
+        },
+        {
+          "days": 3,
+          "weight": 2
+        },
+        {
+          "days": 4,
+          "weight": 1
+        }
+      ]
+    },
+    {
+      "id": "seven-day",
+      "label": "Around 7 days later",
+      "weights": [
+        {
+          "days": 6,
+          "weight": 1
+        },
+        {
+          "days": 7,
+          "weight": 2
+        },
+        {
+          "days": 8,
+          "weight": 1
+        }
+      ]
+    }
+  ],
+  "defaults": {
+    "distance": "broad",
+    "lag": "three-day"
+  },
+  "outlet_bindings_sha256": "177adcbbfc8962da0466d7697c434734b2413796f8fb4c3963e8cfc4dcf62a90"
+}
