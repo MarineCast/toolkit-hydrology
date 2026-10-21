@@ -56,6 +56,15 @@ No sibling package installation is needed for native data access. Downloads, cac
 virtual environment and releases are ignored by Git. Optional `USGS_API_KEY` raises
 provider rate limits; do not store it in a tracked file.
 
+GitHub's [offline package workflow](.github/workflows/ci.yml) runs the synthetic
+suite on Python 3.11 and 3.14, checks dependency consistency and the CLI, and builds
+a regular wheel. A fresh environment then runs the contract tests and CLI outside
+the checkout using that wheel. Live-marked tests, provider acquisition and retained
+data products are excluded. Passing these checks establishes software/package
+acceptance only; the scientific and regional limits in
+[validation](docs/VALIDATION.md) still apply. This workflow does not change branch
+protection requirements.
+
 ## Local run defaults
 
 Copy `.env.example` to `.env` in this toolkit folder, following Meteorology's
