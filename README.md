@@ -65,6 +65,13 @@ acceptance only; the scientific and regional limits in
 [validation](docs/VALIDATION.md) still apply. This workflow does not change branch
 protection requirements.
 
+As checked on 2026-10-21, the separate `main-merge-access` ruleset permits PR
+merges through `main-merge-stevetylda`. The user approved repository write access
+for that team, whose only current member is `stevetylda`; future members inherit
+its write access. The existing PR, review-thread, deletion and force-push
+safeguards remain in place. Hydrology currently has no required CI check names
+in branch protection; inspect the offline workflow results before merging.
+
 ## Local run defaults
 
 Copy `.env.example` to `.env` in this toolkit folder, following Meteorology's
