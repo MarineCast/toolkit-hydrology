@@ -1,0 +1,205 @@
+{
+  "scope": "Retained-input replay; no source reacquisition or operational-vintage proof",
+  "python": "3.14.0",
+  "packages": {
+    "marinecast-hydrology": "0.1.0",
+    "pandas": "3.1.0",
+    "numpy": "2.5.4",
+    "pyarrow": "26.0.0",
+    "pyproj": "3.8.0"
+  },
+  "source_product_sha256": {
+    "catalog.json": "52b39404a2358648f803b3f4611fee83ee3cd2457ffb3f867afa9fbad4514088",
+    "causal.parquet": "6e306d75cdb87daec0bd95de0781835c6fb0a6ac50080249467cac3f1bd9e3ef",
+    "columbia/acquisition-ledger.json": "557ea8a6c0cadb16410fe6d1b1726d55de956bd9e1aeb45a7bdc6e95e5cfd883",
+    "columbia/conditions.parquet": "b63f168910ce2b410b8d3265d3aaf9073f5d7547fc10cb0be2aa07a2a088410d",
+    "columbia/coverage.parquet": "6a6e118176bdacf56d15fbac0a815bd464e935962c7faf059a38348b1a3a41fe",
+    "columbia/features.parquet": "467e539ed8b88cc4f859ef3e33ac3a473764148050c4a8dce223f6436a9e829a",
+    "columbia/manifest.json": "505be6b3f16b7c90153eea559abbbccf03fd8f4e57e47ed1b866670a2d4ed37a",
+    "columbia/metadata.json": "5c084d5a15188a3d1e3af8cad72b5cdb7c018d94b50cd0b3619f089b957ed031",
+    "columbia/observations.parquet": "21dd7df34bc29b3795a5204d90fa1c6f338f31ee4424c18ba7ea89ef532e74af",
+    "columbia/warmup.parquet": "2e46fe273896c12def701fe34d937cd94b745c7e8ad2a87bc3267b6050a3f000",
+    "cowichan/acquisition-ledger.json": "4462d917e6a3e748625f2055685a3e804f3c08e8bde60d24783a9d1ebe0f398e",
+    "cowichan/conditions.parquet": "15575d6545f2c4aa1e2e4979e091153f495508c9afce1c807abac550a83e0fc8",
+    "cowichan/coverage.parquet": "056c3afc1c24cb2273d47a048eb11601ee56409733ac6a80b6c09dbfdf4d919e",
+    "cowichan/features.parquet": "0bc6373f36b0a1c386a575c48abe4484515d9d13cffe770dcb16d990f3413e4f",
+    "cowichan/manifest.json": "fe9634c63112770fed12a14d5a721ff59b6240b12f07bf592b47890eee215bf1",
+    "cowichan/metadata.json": "257685461c22cca7e26091c52bb026cb2ffc3381840d85da28fa4adf81cf7280",
+    "cowichan/observations.parquet": "7318c12c16daf38defc832b0fdbc86e61a45107ccf2f7fc375becac9542e8946",
+    "cowichan/warmup.parquet": "01b8e733d023af723ae87db022af9c3aac7a8a178e9e4e3733bd49e353edb863",
+    "elwha/acquisition-ledger.json": "51acec2f55ca51c5ad33019657be1c2b7c88b8d1647cf360917e41c196fe2efe",
+    "elwha/conditions.parquet": "c05da0669fd7cbcc25f6b148d5c46c7d0b0d9616b4a1f26e40ab198baa6f96ad",
+    "elwha/coverage.parquet": "fe19973329e7e756d8efb102c3756bc270a727777633773ad63c8faa4674db0f",
+    "elwha/features.parquet": "2983ad06f81a2309bfe24705b406684ebc7ede851cc04bdefbc678aa2741ac8d",
+    "elwha/manifest.json": "0c17b06b8d6f7b35e82710f6d7b908ef6784730bb430d0242a8aef22be90bfc0",
+    "elwha/metadata.json": "ebe5a8e5dec4a91954e02cf99e2fe8aa5128a9c27c2a8c6a7d9b542fd4523104",
+    "elwha/observations.parquet": "9200791e225281547a9c7a08b70a4627e689579361e8668bec155708ae3f5707",
+    "elwha/warmup.parquet": "76e012d9d2b2ac423059c4a2b35f4c45ec4fe6f292863e2553e6f3ecd0e1bb45",
+    "fraser/acquisition-ledger.json": "e67e8b1c13d571f2a2705829adc0f59bb20319daaacded17a4cb3a46f5353243",
+    "fraser/conditions.parquet": "f2ab96911d853cfb678ee5dc933f7ca7e80e1baf1567a27a1fd803107d4d9511",
+    "fraser/coverage.parquet": "150aef6ce68013a2cb581d1195cfad3f89c3f24c126cafc38525c10786a8bb0c",
+    "fraser/features.parquet": "b8653934fd4b03820e342c4c2b27f37e004c19d064ac58e6aedff78b2f71a4fe",
+    "fraser/manifest.json": "51acb081f9bf6b2bba63373af2fcaefd79c13441fe10a8ce4af53a45521b9c7d",
+    "fraser/metadata.json": "a302221e2f6c9576bf9be9cb7eccbf8c330d39b320e52c5fe8d44db28e950477",
+    "fraser/observations.parquet": "82c910010a5885b616ccbb98579da9abbcfd2a6c7604baf6525799c55d982779",
+    "fraser/warmup.parquet": "01b8e733d023af723ae87db022af9c3aac7a8a178e9e4e3733bd49e353edb863",
+    "influence.parquet": "1922301967fbe166dab55bce90ac48b24b5ca598765759c44807d1920fb95e66",
+    "nooksack/acquisition-ledger.json": "72dec580f599becf47f8ea1c8c592690e69d6ec8b83c7941ebb6b9641b881538",
+    "nooksack/conditions.parquet": "51738a57ca1feaf1d8872e5a7e614e6e3920c3801e61b46a0d0feb7020a189c4",
+    "nooksack/coverage.parquet": "07b6d49530bdcfcdb72f66ee70f74590a8c5bb04fd904b36ab730275d1ef8585",
+    "nooksack/features.parquet": "8c9c4e542bc0cc305e215809d1c2d0837a08f261c06ce49619bc258c50753c96",
+    "nooksack/manifest.json": "f719560f92037606500254512c4ea49249844dc0cd7f9fa600c3b757bdacc5a9",
+    "nooksack/metadata.json": "532d487d75ab1d2b43c8b2d3d431a802c3ab40ff4590bb86a7755ceb6acdf9ae",
+    "nooksack/observations.parquet": "501525a52af184e80aed5b9387afd71615c7809944cfdee63ab62e0cf3238e3b",
+    "nooksack/warmup.parquet": "530edcbbd80eb2e89e513c6d713cc7a7a59ddf69009b1f223ab09fb78025ada0",
+    "owner.json": "503e6ffaa4118276e260b95673e8df6e34819e00818d20e98340bc871e066ce4",
+    "puyallup/acquisition-ledger.json": "5e88bd6123ccf2437bb84cf90bab0802b864b69ef563c7d0a067efaa7c7d3842",
+    "puyallup/conditions.parquet": "3af10de336027eafebd47d336e709b53ac1c9bf5f9159db1cb6c79d084e34f26",
+    "puyallup/coverage.parquet": "0b2aac546f008ba5c512cbe54a058ca88caf937a4fbc2ae5e0fa54ac1ba3092c",
+    "puyallup/features.parquet": "d09ce900cf920635b0271803cbd5e1580cbe7664d9ef215b764e2bb9108b904d",
+    "puyallup/manifest.json": "a1f583f7a0a5d1191ac1a77c3dbb5cd5041db49bbd55512b08b483616b1aeeaf",
+    "puyallup/metadata.json": "082ab9d3961026bc88ea5533af4262dcccf3dc76e9d5ac00062756abe7f7502c",
+    "puyallup/observations.parquet": "1fd8d4d41caea34b341918fc4d5e4e0175a664b860c0f3e2015fee2cea897c2e",
+    "puyallup/warmup.parquet": "ecee1f22435b29c9ec5e3e74371116a1ea4cc599b72f417385fb15bd78b019e3",
+    "queets/acquisition-ledger.json": "5db6cbc84c4557351a0bbb7e786dfa0cc3af9e24ee9c18af809e2c16700bd201",
+    "queets/conditions.parquet": "2dee3f655da8fa7bb3d0601249a22775544c95d21276a08dc39be494383d5758",
+    "queets/coverage.parquet": "c2ee0679254216e7b49ec4efc6122daa99c868c69d98d73f38b129c5571b3aa3",
+    "queets/features.parquet": "bcbf394a80849411c92193de543afe3e7e5759b6b5664cc0443b524017f64bd5",
+    "queets/manifest.json": "b859b792379f9cab89304f2a29d7757b5a4e848d3daa395af288268e9322b2f6",
+    "queets/metadata.json": "22b553899ccffeeb5a8e563086373a5b04ea251adbfad1518674a40051e9b820",
+    "queets/observations.parquet": "d2bddf7532543f03da4f427e9371e34b20beae3201df7259f65307981cee639a",
+    "queets/warmup.parquet": "293a931b867af874ada1faf56143c3dad96f7ed42e67dce2ce46b76925b109f5",
+    "skagit/acquisition-ledger.json": "f6dcf0c6b83f048b5968bf3857f0f1e709fd66c175f8a227bf5b837c8d9d7c2c",
+    "skagit/conditions.parquet": "7fbe37099be595e039c476a17aca7cacdcc3d8d0b25cd3337a27fad5b78c72bb",
+    "skagit/coverage.parquet": "71d2eccab4ffce4865cb82a4c7551e9d030d914dde7823f68e96ed117e05c08b",
+    "skagit/features.parquet": "aa0762c37abd57f72fd7578d455d0013a1e9f2286dbf496814aee99608e20ca3",
+    "skagit/manifest.json": "d9ded0eadb8d690586dd1179e5c43243e6d3ff723ab9f3e2f01e38b30dac8e52",
+    "skagit/metadata.json": "47db3699b793d7fbffd131eb00d19134890a8b3516be47d2fa795a83a6fc5170",
+    "skagit/observations.parquet": "270eac10b0317dfd3eb7a0c6c049372318bb858e2c9df6a07c2e9b29b6a5e227",
+    "skagit/warmup.parquet": "800a84bc5f9601c585a9757d19630131bd56a0909ec1679d2147667b96c33712",
+    "skokomish/acquisition-ledger.json": "7c2a8c0b883521def07dcd0c17363bb8439f33b2e93e425d1d7732eadb8f3851",
+    "skokomish/conditions.parquet": "2d6d62d93e6dc6fb43fa9960a2aca1c78bdc499e26c7f2a58e4bb8909a0a0498",
+    "skokomish/coverage.parquet": "c042ee45a8146bee82d3e9901606633dd366878fc6bea2cc7f175506646b8010",
+    "skokomish/features.parquet": "6a8dbf2ec5c0e1a4f56a286abe6d5cb4a785ba905c5738435b3794a645fcacc2",
+    "skokomish/manifest.json": "a273aa0dc34f09c2ded4df558845081f663528bfeaa4c1c8e0ce66612e17fa77",
+    "skokomish/metadata.json": "76b7068d1acde7cb8af8e553ba7264f20285a525a2bc640d315f7f2d4975cb8f",
+    "skokomish/observations.parquet": "bfd7e9c11f515940e129b98770cd4ac5a6c6b02ee95ac0f79d81a147e2d2e176",
+    "skokomish/warmup.parquet": "9ddb8ae5e089aff2010c734fab12ad641eca396f663a71e2737f7dc354d227ce",
+    "snohomish/acquisition-ledger.json": "2abd0c2f1df9fc43e1d1c3feaef352d75c2d71d066ffbaa2348c070a8975495c",
+    "snohomish/conditions.parquet": "dda46787c8359403d88528ca1141bc562d7f875e54b41524a85c95ede2f51d96",
+    "snohomish/coverage.parquet": "e102a18fc04843af783cd89ae3183a14e2e658d1411f19e9cd2a52d45d7fcbad",
+    "snohomish/features.parquet": "e4ba1a06ec6decf7295c7c5ffe2f88400715396dab9330b7f1035bf9fe991e70",
+    "snohomish/manifest.json": "2b583b39701598090bc0d2b09017f6a0492fb828eeb53e126a8683fd60035297",
+    "snohomish/metadata.json": "f92ef12aea081f3f4aa7aaee7bc2079c096b3d0b67b7057b8c0054237a0dc166",
+    "snohomish/observations.parquet": "0db4e990ef269a179763a0f3170bd7c5fdc781caaed9106593a42bb829a0e68f",
+    "snohomish/warmup.parquet": "530edcbbd80eb2e89e513c6d713cc7a7a59ddf69009b1f223ab09fb78025ada0",
+    "station_temperature.parquet": "0b53ab51df95498b222ecda883cc7a7514de689b386625f1f0d99283074520ec"
+  },
+  "causal": {
+    "rows": 519760,
+    "null_values": 68501,
+    "exact_values": true,
+    "metrics": {
+      "causal_days_since_discharge_pulse": {
+        "rows": 64970,
+        "nonnull": 52142,
+        "minimum": 0.0,
+        "maximum": 1286.0
+      },
+      "causal_discharge_pulse": {
+        "rows": 64970,
+        "nonnull": 53661,
+        "minimum": 0.0,
+        "maximum": 1.0
+      },
+      "causal_discharge_seasonal_anomaly": {
+        "rows": 64970,
+        "nonnull": 53748,
+        "minimum": -6121.767302746839,
+        "maximum": 7599.271088212027
+      },
+      "causal_discharge_seasonal_mean": {
+        "rows": 64970,
+        "nonnull": 54010,
+        "minimum": 3.8805483848817888,
+        "maximum": 10622.775740878453
+      },
+      "causal_discharge_seasonal_p90": {
+        "rows": 64970,
+        "nonnull": 54010,
+        "minimum": 5.284000205993653,
+        "maximum": 14605.8294721536
+      },
+      "causal_discharge_seasonal_percentile": {
+        "rows": 64970,
+        "nonnull": 53748,
+        "minimum": 0.0,
+        "maximum": 100.0
+      },
+      "causal_reference_samples": {
+        "rows": 64970,
+        "nonnull": 64970,
+        "minimum": 0.0,
+        "maximum": 313.0
+      },
+      "causal_reference_years": {
+        "rows": 64970,
+        "nonnull": 64970,
+        "minimum": 0.0,
+        "maximum": 10.0
+      }
+    }
+  },
+  "temperature": {
+    "rows": 5301,
+    "null_values": 0,
+    "exact_values": true,
+    "stations": {
+      "DFO-QUALARK": {
+        "rows": 217,
+        "first": "2009-07-01",
+        "last": "2026-09-20",
+        "statistics": {
+          "daily_mean": 217
+        }
+      },
+      "ECOLOGY-07A089": {
+        "rows": 1077,
+        "first": "2023-07-14",
+        "last": "2026-10-27",
+        "statistics": {
+          "daily_mean": 1077
+        }
+      },
+      "ECOLOGY-10A040": {
+        "rows": 842,
+        "first": "2023-11-15",
+        "last": "2026-03-22",
+        "statistics": {
+          "daily_mean": 842
+        }
+      },
+      "ECOLOGY-EIM-16A070": {
+        "rows": 2256,
+        "first": "2009-06-19",
+        "last": "2017-09-13",
+        "statistics": {
+          "daily_max": 752,
+          "daily_mean": 752,
+          "daily_min": 752
+        }
+      },
+      "ECOLOGY-EIM-18B070": {
+        "rows": 909,
+        "first": "2009-06-19",
+        "last": "2012-09-19",
+        "statistics": {
+          "daily_max": 303,
+          "daily_mean": 303,
+          "daily_min": 303
+        }
+      }
+    }
+  },
+  "original_product_unchanged": true
+}

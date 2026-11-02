@@ -1,0 +1,40 @@
+name: Offline package checks
+
+on: [push, pull_request]
+
+permissions:
+  contents: read
+
+jobs:
+  test:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+    strategy:
+      fail-fast: false
+      matrix:
+        python: ['3.11', '3.14']
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python }}
+      - run: python -m pip install -e '.[test]'
+      - run: python -m pip check
+      - name: Synthetic offline suite
+        run: python -m pytest -q -m 'not live'
+      - run: hydrology --help
+      - run: python -m pip wheel . --no-deps --wheel-dir "$RUNNER_TEMP/dist"
+      - name: Installed wheel contract tests outside the checkout
+        run: |
+          wheel_env="$RUNNER_TEMP/wheel-env"
+          python -m venv "$wheel_env"
+          "$wheel_env/bin/python" -m pip install "$RUNNER_TEMP"/dist/*.whl pytest
+          "$wheel_env/bin/python" -m pip check
+          outside="$RUNNER_TEMP/wheel-smoke"
+          mkdir -p "$outside"
+          cp tests/test_contracts.py "$outside/"
+          cd "$outside"
+          unset PYTHONPATH
+          "$wheel_env/bin/python" -m pytest -q test_contracts.py
+          "$wheel_env/bin/hydrology" --help
+      - run: git diff --check

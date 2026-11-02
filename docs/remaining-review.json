@@ -1,0 +1,539 @@
+{
+  "feature_replay": {
+    "columbia": {
+      "rows": 84461,
+      "nulls": 26159,
+      "metrics": [
+        "days_since_flow_pulse",
+        "discharge_change_7d",
+        "discharge_mean",
+        "discharge_mean_30d",
+        "discharge_mean_7d",
+        "discharge_seasonal_anomaly",
+        "discharge_seasonal_percentile",
+        "high_flow_duration",
+        "low_flow_duration",
+        "temperature_7dadm",
+        "temperature_max",
+        "temperature_mean",
+        "temperature_seasonal_anomaly"
+      ],
+      "exact_row_parity": true
+    },
+    "cowichan": {
+      "rows": 84461,
+      "nulls": 39337,
+      "metrics": [
+        "days_since_flow_pulse",
+        "discharge_change_7d",
+        "discharge_mean",
+        "discharge_mean_30d",
+        "discharge_mean_7d",
+        "discharge_seasonal_anomaly",
+        "discharge_seasonal_percentile",
+        "high_flow_duration",
+        "low_flow_duration",
+        "temperature_7dadm",
+        "temperature_max",
+        "temperature_mean",
+        "temperature_seasonal_anomaly"
+      ],
+      "exact_row_parity": true
+    },
+    "elwha": {
+      "rows": 84461,
+      "nulls": 38988,
+      "metrics": [
+        "days_since_flow_pulse",
+        "discharge_change_7d",
+        "discharge_mean",
+        "discharge_mean_30d",
+        "discharge_mean_7d",
+        "discharge_seasonal_anomaly",
+        "discharge_seasonal_percentile",
+        "high_flow_duration",
+        "low_flow_duration",
+        "temperature_7dadm",
+        "temperature_max",
+        "temperature_mean",
+        "temperature_seasonal_anomaly"
+      ],
+      "exact_row_parity": true
+    },
+    "fraser": {
+      "rows": 84461,
+      "nulls": 39229,
+      "metrics": [
+        "days_since_flow_pulse",
+        "discharge_change_7d",
+        "discharge_mean",
+        "discharge_mean_30d",
+        "discharge_mean_7d",
+        "discharge_seasonal_anomaly",
+        "discharge_seasonal_percentile",
+        "high_flow_duration",
+        "low_flow_duration",
+        "temperature_7dadm",
+        "temperature_max",
+        "temperature_mean",
+        "temperature_seasonal_anomaly"
+      ],
+      "exact_row_parity": true
+    },
+    "nooksack": {
+      "rows": 84461,
+      "nulls": 20147,
+      "metrics": [
+        "days_since_flow_pulse",
+        "discharge_change_7d",
+        "discharge_mean",
+        "discharge_mean_30d",
+        "discharge_mean_7d",
+        "discharge_seasonal_anomaly",
+        "discharge_seasonal_percentile",
+        "high_flow_duration",
+        "low_flow_duration",
+        "temperature_7dadm",
+        "temperature_max",
+        "temperature_mean",
+        "temperature_seasonal_anomaly"
+      ],
+      "exact_row_parity": true
+    },
+    "puyallup": {
+      "rows": 84461,
+      "nulls": 38988,
+      "metrics": [
+        "days_since_flow_pulse",
+        "discharge_change_7d",
+        "discharge_mean",
+        "discharge_mean_30d",
+        "discharge_mean_7d",
+        "discharge_seasonal_anomaly",
+        "discharge_seasonal_percentile",
+        "high_flow_duration",
+        "low_flow_duration",
+        "temperature_7dadm",
+        "temperature_max",
+        "temperature_mean",
+        "temperature_seasonal_anomaly"
+      ],
+      "exact_row_parity": true
+    },
+    "queets": {
+      "rows": 84461,
+      "nulls": 38987,
+      "metrics": [
+        "days_since_flow_pulse",
+        "discharge_change_7d",
+        "discharge_mean",
+        "discharge_mean_30d",
+        "discharge_mean_7d",
+        "discharge_seasonal_anomaly",
+        "discharge_seasonal_percentile",
+        "high_flow_duration",
+        "low_flow_duration",
+        "temperature_7dadm",
+        "temperature_max",
+        "temperature_mean",
+        "temperature_seasonal_anomaly"
+      ],
+      "exact_row_parity": true
+    },
+    "skagit": {
+      "rows": 84461,
+      "nulls": 28352,
+      "metrics": [
+        "days_since_flow_pulse",
+        "discharge_change_7d",
+        "discharge_mean",
+        "discharge_mean_30d",
+        "discharge_mean_7d",
+        "discharge_seasonal_anomaly",
+        "discharge_seasonal_percentile",
+        "high_flow_duration",
+        "low_flow_duration",
+        "temperature_7dadm",
+        "temperature_max",
+        "temperature_mean",
+        "temperature_seasonal_anomaly"
+      ],
+      "exact_row_parity": true
+    },
+    "skokomish": {
+      "rows": 84461,
+      "nulls": 43004,
+      "metrics": [
+        "days_since_flow_pulse",
+        "discharge_change_7d",
+        "discharge_mean",
+        "discharge_mean_30d",
+        "discharge_mean_7d",
+        "discharge_seasonal_anomaly",
+        "discharge_seasonal_percentile",
+        "high_flow_duration",
+        "low_flow_duration",
+        "temperature_7dadm",
+        "temperature_max",
+        "temperature_mean",
+        "temperature_seasonal_anomaly"
+      ],
+      "exact_row_parity": true
+    },
+    "snohomish": {
+      "rows": 84461,
+      "nulls": 39030,
+      "metrics": [
+        "days_since_flow_pulse",
+        "discharge_change_7d",
+        "discharge_mean",
+        "discharge_mean_30d",
+        "discharge_mean_7d",
+        "discharge_seasonal_anomaly",
+        "discharge_seasonal_percentile",
+        "high_flow_duration",
+        "low_flow_duration",
+        "temperature_7dadm",
+        "temperature_max",
+        "temperature_mean",
+        "temperature_seasonal_anomaly"
+      ],
+      "exact_row_parity": true
+    }
+  },
+  "scope": "Read-only full retained-history feature calculations; influence publication intercepted, no transaction test",
+  "input_bindings": {
+    "/Users/tylerstevenson/Documents/Code_Repos/MarineCast/Data/Hydrology/columbia/conditions.parquet": {
+      "exists": true,
+      "matches": true
+    },
+    "/Users/tylerstevenson/Documents/Code_Repos/MarineCast/Data/Hydrology/columbia/manifest.json": {
+      "exists": true,
+      "matches": true
+    },
+    "/Users/tylerstevenson/Documents/Code_Repos/MarineCast/Data/Hydrology/cowichan/conditions.parquet": {
+      "exists": true,
+      "matches": true
+    },
+    "/Users/tylerstevenson/Documents/Code_Repos/MarineCast/Data/Hydrology/cowichan/manifest.json": {
+      "exists": true,
+      "matches": true
+    },
+    "/Users/tylerstevenson/Documents/Code_Repos/MarineCast/Data/Hydrology/elwha/conditions.parquet": {
+      "exists": true,
+      "matches": true
+    },
+    "/Users/tylerstevenson/Documents/Code_Repos/MarineCast/Data/Hydrology/elwha/manifest.json": {
+      "exists": true,
+      "matches": true
+    },
+    "/Users/tylerstevenson/Documents/Code_Repos/MarineCast/Data/Hydrology/fraser/conditions.parquet": {
+      "exists": true,
+      "matches": true
+    },
+    "/Users/tylerstevenson/Documents/Code_Repos/MarineCast/Data/Hydrology/fraser/manifest.json": {
+      "exists": true,
+      "matches": true
+    },
+    "/Users/tylerstevenson/Documents/Code_Repos/MarineCast/Data/Hydrology/nooksack/conditions.parquet": {
+      "exists": true,
+      "matches": true
+    },
+    "/Users/tylerstevenson/Documents/Code_Repos/MarineCast/Data/Hydrology/nooksack/manifest.json": {
+      "exists": true,
+      "matches": true
+    },
+    "/Users/tylerstevenson/Documents/Code_Repos/MarineCast/Data/Hydrology/puyallup/conditions.parquet": {
+      "exists": true,
+      "matches": true
+    },
+    "/Users/tylerstevenson/Documents/Code_Repos/MarineCast/Data/Hydrology/puyallup/manifest.json": {
+      "exists": true,
+      "matches": true
+    },
+    "/Users/tylerstevenson/Documents/Code_Repos/MarineCast/Data/Hydrology/queets/conditions.parquet": {
+      "exists": true,
+      "matches": true
+    },
+    "/Users/tylerstevenson/Documents/Code_Repos/MarineCast/Data/Hydrology/queets/manifest.json": {
+      "exists": true,
+      "matches": true
+    },
+    "/Users/tylerstevenson/Documents/Code_Repos/MarineCast/Data/Hydrology/skagit/conditions.parquet": {
+      "exists": true,
+      "matches": true
+    },
+    "/Users/tylerstevenson/Documents/Code_Repos/MarineCast/Data/Hydrology/skagit/manifest.json": {
+      "exists": true,
+      "matches": true
+    },
+    "/Users/tylerstevenson/Documents/Code_Repos/MarineCast/Data/Hydrology/skokomish/conditions.parquet": {
+      "exists": true,
+      "matches": true
+    },
+    "/Users/tylerstevenson/Documents/Code_Repos/MarineCast/Data/Hydrology/skokomish/manifest.json": {
+      "exists": true,
+      "matches": true
+    },
+    "/Users/tylerstevenson/Documents/Code_Repos/MarineCast/Data/Hydrology/snohomish/conditions.parquet": {
+      "exists": true,
+      "matches": true
+    },
+    "/Users/tylerstevenson/Documents/Code_Repos/MarineCast/Data/Hydrology/snohomish/manifest.json": {
+      "exists": true,
+      "matches": true
+    },
+    "/Users/tylerstevenson/Documents/Code_Repos/MarineCast/Data/Seascape/research/outlet-relationships-r8.parquet": {
+      "exists": true,
+      "matches": true
+    },
+    "/Users/tylerstevenson/Documents/Code_Repos/MarineCast/Data/Study/vancouver-island-columbia/registry/coastal-source-research-20261016-v3/manifest.json": {
+      "exists": true,
+      "matches": true
+    },
+    "/Users/tylerstevenson/Documents/Code_Repos/MarineCast/Data/Study/vancouver-island-columbia/registry/coastal-source-research-20261016-v3/water_reporting.r6.txt": {
+      "exists": true,
+      "matches": true
+    },
+    "/Users/tylerstevenson/Documents/Code_Repos/MarineCast/Toolkits/toolkit-hydrology/config/river-influence.json": {
+      "exists": true,
+      "matches": true
+    },
+    "/Users/tylerstevenson/Documents/Code_Repos/MarineCast/Toolkits/toolkit-seascape/config/registries/selected-outlets.research.v1.json": {
+      "exists": true,
+      "matches": true
+    },
+    "/Users/tylerstevenson/Documents/Code_Repos/MarineCast/config/study.v1.json": {
+      "exists": true,
+      "matches": true
+    }
+  },
+  "influence": {
+    "output": "/private/tmp/hydrology-review-20261029/remaining/influence.parquet",
+    "identity": "8278b95f1b2195f66505ab7a0d1580f046da0013428a1e51eee9770429ac60c9",
+    "sha256": "70ae6d74f3928138fb878581ba5687e932c6983aeccecdd21636d79fb3af2a69",
+    "bytes": 2590315,
+    "cells": 2427,
+    "river_days": 64970,
+    "spatial_rows": 72810,
+    "signal_rows": 194910,
+    "exact_row_parity": true,
+    "recipe_runtime_identity_expected_to_differ": true
+  },
+  "original_product_unchanged": true,
+  "strict_utc_h3_final_present": false,
+  "delivered_inventory": {
+    "causal.parquet": {
+      "rows": 519760,
+      "bytes": 1896280
+    },
+    "columbia/conditions.parquet": {
+      "rows": 19491,
+      "bytes": 787271
+    },
+    "columbia/coverage.parquet": {
+      "rows": 216,
+      "bytes": 11252
+    },
+    "columbia/features.parquet": {
+      "rows": 84461,
+      "bytes": 224332
+    },
+    "columbia/observations.parquet": {
+      "rows": 16249,
+      "bytes": 778762
+    },
+    "columbia/warmup.parquet": {
+      "rows": 0,
+      "bytes": 11542
+    },
+    "cowichan/conditions.parquet": {
+      "rows": 19491,
+      "bytes": 130675
+    },
+    "cowichan/coverage.parquet": {
+      "rows": 216,
+      "bytes": 19753
+    },
+    "cowichan/features.parquet": {
+      "rows": 84461,
+      "bytes": 212830
+    },
+    "cowichan/observations.parquet": {
+      "rows": 6497,
+      "bytes": 96457
+    },
+    "cowichan/warmup.parquet": {
+      "rows": 0,
+      "bytes": 11546
+    },
+    "elwha/conditions.parquet": {
+      "rows": 19491,
+      "bytes": 365733
+    },
+    "elwha/coverage.parquet": {
+      "rows": 216,
+      "bytes": 11433
+    },
+    "elwha/features.parquet": {
+      "rows": 84461,
+      "bytes": 931867
+    },
+    "elwha/observations.parquet": {
+      "rows": 6497,
+      "bytes": 336049
+    },
+    "elwha/warmup.parquet": {
+      "rows": 30,
+      "bytes": 18266
+    },
+    "fraser/conditions.parquet": {
+      "rows": 19491,
+      "bytes": 126774
+    },
+    "fraser/coverage.parquet": {
+      "rows": 216,
+      "bytes": 21557
+    },
+    "fraser/features.parquet": {
+      "rows": 84461,
+      "bytes": 165006
+    },
+    "fraser/observations.parquet": {
+      "rows": 6549,
+      "bytes": 93269
+    },
+    "fraser/warmup.parquet": {
+      "rows": 0,
+      "bytes": 11546
+    },
+    "influence.parquet": {
+      "rows": 267720,
+      "bytes": 2590315
+    },
+    "nooksack/conditions.parquet": {
+      "rows": 19491,
+      "bytes": 923281
+    },
+    "nooksack/coverage.parquet": {
+      "rows": 216,
+      "bytes": 11368
+    },
+    "nooksack/features.parquet": {
+      "rows": 84461,
+      "bytes": 261569
+    },
+    "nooksack/observations.parquet": {
+      "rows": 19209,
+      "bytes": 920097
+    },
+    "nooksack/warmup.parquet": {
+      "rows": 0,
+      "bytes": 11530
+    },
+    "puyallup/conditions.parquet": {
+      "rows": 19491,
+      "bytes": 363485
+    },
+    "puyallup/coverage.parquet": {
+      "rows": 216,
+      "bytes": 11493
+    },
+    "puyallup/features.parquet": {
+      "rows": 84461,
+      "bytes": 922423
+    },
+    "puyallup/observations.parquet": {
+      "rows": 6497,
+      "bytes": 333875
+    },
+    "puyallup/warmup.parquet": {
+      "rows": 30,
+      "bytes": 18317
+    },
+    "queets/conditions.parquet": {
+      "rows": 19491,
+      "bytes": 366185
+    },
+    "queets/coverage.parquet": {
+      "rows": 216,
+      "bytes": 11439
+    },
+    "queets/features.parquet": {
+      "rows": 84461,
+      "bytes": 946988
+    },
+    "queets/observations.parquet": {
+      "rows": 6497,
+      "bytes": 336504
+    },
+    "queets/warmup.parquet": {
+      "rows": 30,
+      "bytes": 18258
+    },
+    "skagit/conditions.parquet": {
+      "rows": 19491,
+      "bytes": 685433
+    },
+    "skagit/coverage.parquet": {
+      "rows": 216,
+      "bytes": 11446
+    },
+    "skagit/features.parquet": {
+      "rows": 84461,
+      "bytes": 233480
+    },
+    "skagit/observations.parquet": {
+      "rows": 13649,
+      "bytes": 669429
+    },
+    "skagit/warmup.parquet": {
+      "rows": 0,
+      "bytes": 11623
+    },
+    "skokomish/conditions.parquet": {
+      "rows": 19491,
+      "bytes": 356033
+    },
+    "skokomish/coverage.parquet": {
+      "rows": 216,
+      "bytes": 11858
+    },
+    "skokomish/features.parquet": {
+      "rows": 84461,
+      "bytes": 913924
+    },
+    "skokomish/observations.parquet": {
+      "rows": 6152,
+      "bytes": 319409
+    },
+    "skokomish/warmup.parquet": {
+      "rows": 30,
+      "bytes": 18297
+    },
+    "snohomish/conditions.parquet": {
+      "rows": 19491,
+      "bytes": 367775
+    },
+    "snohomish/coverage.parquet": {
+      "rows": 216,
+      "bytes": 11026
+    },
+    "snohomish/features.parquet": {
+      "rows": 84461,
+      "bytes": 229781
+    },
+    "snohomish/observations.parquet": {
+      "rows": 6497,
+      "bytes": 337984
+    },
+    "snohomish/warmup.parquet": {
+      "rows": 0,
+      "bytes": 11530
+    },
+    "station_temperature.parquet": {
+      "rows": 5301,
+      "bytes": 1397734
+    }
+  }
+}

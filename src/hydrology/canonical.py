@@ -1,0 +1,20 @@
+"""Compatibility imports; implementation lives in pipelines.publication."""
+
+from .pipelines.publication import CONDITIONS_SCHEMA as CONDITIONS_SCHEMA
+from .pipelines.publication import EXTRA as EXTRA
+from .pipelines.publication import FEATURE_SCHEMA as FEATURE_SCHEMA
+from .pipelines.publication import FLOATS as FLOATS
+from .pipelines.publication import OBS_SCHEMA as OBS_SCHEMA
+from .pipelines.publication import OWNER as OWNER
+from .pipelines.publication import _cleanup_snapshots as _cleanup_snapshots
+from .pipelines.publication import _owner as _owner
+from .pipelines.publication import _parquet as _parquet
+from .pipelines.publication import _paths as _paths
+from .pipelines.publication import _pin as _pin
+from .pipelines.publication import _validate_snapshot as _validate_snapshot
+from .pipelines.publication import interpretation_notes as interpretation_notes
+from .pipelines.publication import product_snapshot as product_snapshot
+from .pipelines.publication import publish_rivers as publish_rivers
+from .pipelines.publication import schema as schema
+from .pipelines.publication import validate_product as validate_product
+from .utils.io import checksum as checksum
