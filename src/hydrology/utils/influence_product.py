@@ -113,6 +113,11 @@ def native_catalog_sha256(catalog):
 
 def catalog_with_influence(catalog, root):
     """Inventory the flat companion; a changed native binding requires a rebuild."""
+    from .causal import catalog_with_causal
+
+    from .station_temperature import catalog_with_station_temperature
+
+    catalog = catalog_with_station_temperature(catalog_with_causal(catalog, root), root)
     path = Path(root) / "influence.parquet"
     if not path.exists():
         if "influence" in catalog.get("products", {}):

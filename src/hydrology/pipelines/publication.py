@@ -102,6 +102,8 @@ def _download_root(config, store):
 
 
 def _pin(target, store):
+    if (store / "station-temperature-transaction.json").exists():
+        raise ValueError("Interrupted station-temperature transaction; inspect journal and restore prior catalog/product before reading")
     if target.is_symlink() or not target.is_dir():
         raise ValueError(
             "An existing owned current product directory is required; migrate legacy symlinks first"
@@ -225,6 +227,16 @@ def product_snapshot(destination, *, exclusive=False):
 
 def _preserve_influence(old, stage):
     """Carry the flat companion forward; its source hash still requires a rebuild."""
+    if old is not None and (old / "station_temperature.parquet").exists():
+        source = old / "station_temperature.parquet"
+        if source.is_symlink() or not source.is_file():
+            raise ValueError("Unexpected station temperature companion")
+        os.link(source, stage / source.name)
+    if old is not None and (old / "causal.parquet").exists():
+        source = old / "causal.parquet"
+        if source.is_symlink() or not source.is_file():
+            raise ValueError("Unexpected causal companion")
+        os.link(source, stage / source.name)
     if old is not None and (old / "influence.parquet").exists():
         source = old / "influence.parquet"
         if source.is_symlink() or not source.is_file():
@@ -238,7 +250,13 @@ def _validate_snapshot(root):
         raise ValueError("Unknown canonical schema")
     if catalog_with_influence(catalog, root) != catalog:
         raise ValueError("Influence catalog binding mismatch")
+    from ..utils.causal import catalog_with_causal
+
+    if catalog_with_causal(catalog, root) != catalog:
+        raise ValueError("Causal catalog binding mismatch")
     allowed = {
+        "station_temperature.parquet",
+        "causal.parquet",
         "catalog.json",
         "owner.json",
         "influence.parquet",

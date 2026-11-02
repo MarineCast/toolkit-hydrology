@@ -117,3 +117,43 @@ values; 12061500 supplied 6,152 with 345 explicit source gaps. All four requests
 finished; execution completion is distinct from gap-free coverage. Unsupported
 temperature remains null/unavailable. Official source responses and qualifiers were
 preserved in normalized observations; no gauge was substituted or summed.
+
+### DFO Qualark report observations — 2026-10-26
+
+The independent [station-temperature adapter](STATION_TEMPERATURE.md) qualifies
+explicitly labelled Qualark daily-mean report tables, with native dates and unknown
+provider approval/timezone boundaries. This does not qualify Ecology access, older
+DFO archive formats, a continuous logger history or Hope-to-Qualark substitution.
+
+The subsequent 2026-10-26 historical review qualified 2012–2017 PDF tables and three
+2009–2011 image samples at Qualark. Source-hash-pinned reviewed exceptions, duplicate
+provenance, explicit Hope exclusions and remaining archive limits are documented in
+[the historical extension](STATION_TEMPERATURE.md#historical-extension-qualified-2026-10-26).
+
+
+Ecology original browser exports were qualified on 2026-10-28 for exact stations
+[10A040](https://apps.ecology.wa.gov/continuousflowandwq/StationDetails?sta=10A040)
+and [07A089](https://apps.ecology.wa.gov/continuousflowandwq/StationDetails?sta=07A089).
+See [station temperature](STATION_TEMPERATURE.md#ecology-browser-exports-qualified-2026-10-28)
+for native PST daily means, quality exclusions, original ZIP provenance and pending
+EIM stations. This successful authorized UI route supersedes the old blanket
+export-access blocker; it does not authorize bypassing automated endpoint denials.
+
+
+Elwha EIM export5019205 was user-delivered on2026-10-28 as original extracted files.
+Its39,746CSVrecords and exact18B070identity were verified. Complete reviewed native
+PST daily summaries are cross-checked against retained half-hour observations;
+[Elwha qualification](STATION_TEMPERATURE.md#elwha-eim-original-export-qualified-2026-10-28)
+details the retained pooling caveat, coordinates/datum conversion and exclusions.
+
+
+Skokomish EIM export01147 was user-delivered and qualified2026-10-29. Exact16A070
+identity and146,871source records verified;2,256complete reviewed native PST daily
+summaries imported. See [Skokomish qualification](STATION_TEMPERATURE.md#skokomish-eim-delivery-qualified-2026-10-29).
+
+## Manual source acquisition
+
+See [manual input instructions](MANUAL_INPUTS.md) for official source links,
+export selections, retained-file layouts, ingest/validation commands and the
+explicit limits of fresh EIM export qualification. User-supplied originals are
+a supported workflow; historical operational availability is a separate question.

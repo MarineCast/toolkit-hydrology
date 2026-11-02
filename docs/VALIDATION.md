@@ -703,3 +703,147 @@ matched source bytes. Wheel SHA-256:
 `0a51269043ced36cc69d5b2e9b8aa9985c16e56a0345e4c9b37c624dfba251d4`.
 No Canadian acquisition, climatology fit, eligibility upgrade, station sum, Seascape
 modification, physical plume validation, commit, push or merge was performed.
+
+
+## Causal retained-discharge build — 2026-10-26
+
+The single-worker offline build produced 519,760 rows (64,970 river-days × eight
+metrics), 2009-01-01–2026-10-15, in 1,896,280 bytes. Runtime 11.96 seconds; measured
+peak process RSS 712,523,776 bytes (includes validation/readback). All 82 pre-existing
+non-catalog files retained identical SHA256, including discharge, other variables,
+retrospective features and influence. Influence catalog source_status remains current.
+The native catalog validator and Parquet frame readback passed.
+
+Full offline suite: 207 passed in 12.02 seconds with the existing OrcaCast Python
+3.12 environment and PYTHONPATH=src; toolkit .venv is absent. An earlier sandboxed
+run had 205 passes and one configured-directory writability failure; the authorized
+filesystem run resolved that environmental failure. No network acquisition, app
+changes, model fitting, UTC conversion or H3 build was run.
+
+Valid value counts out of 64,970 river-days per metric:
+
+- `causal_days_since_discharge_pulse`: 52142
+- `causal_discharge_pulse`: 53661
+- `causal_discharge_seasonal_anomaly`: 53748
+- `causal_discharge_seasonal_mean`: 54010
+- `causal_discharge_seasonal_p90`: 54010
+- `causal_discharge_seasonal_percentile`: 53748
+- `causal_reference_samples`: 64970
+- `causal_reference_years`: 64970
+
+Seasonal references first qualify on 2012-01-02; 2012-01-01 still uses as-of
+2011-12-31 and only two completed reference years. Baseline/P90 each have 5,401
+valid days per river. Skokomish has 5,150 anomaly/percentile, 5,066 pulse and 3,896
+pulse-age days; strict missing-day resets intentionally reduce pulse-age coverage.
+
+Skagit output 2026-10-15 (as-of 2026-10-14): mean 370.222673 m3/s, P90
+762.006342 m3/s, anomaly −158.412661 m3/s, percentile 23.225806%, pulse 0,
+pulse age 211 days, reference 310 samples / 10 years. These are gauge descriptors,
+not calibrated flood/ecological thresholds. See [method limits](CAUSAL_FEATURES.md).
+
+SHA256 causal.parquet: `6e306d75cdb87daec0bd95de0781835c6fb0a6ac50080249467cac3f1bd9e3ef`.
+One small prior catalog remains outside Data in the destination-owned work area
+(`causal-prior-catalog.json`); no old data replay, downloads, preview or inhibitor
+was created. Its inspection/cleanup is required before another companion publication;
+permanent deletion was outside this task's authorization.
+
+## Independent station-temperature delivery — 2026-10-26
+
+Real official DFO report-text validation promoted 101 Qualark daily means in
+`station_temperature.parquet` (130,243 bytes; SHA256
+`a471a16751519e8f43c68e2ffa67a9f779bcf945230da4fc1a0f6066709a106c`).
+Support: 2023 26 dates (July 26–October 29); 2024 32 (July 1–October 16);
+2025 21 (July 9–September 21); 2026 22 (July 8–September 20). These are sparse
+observations, not continuous date ranges. Seven early-2023 Hope-labelled rows were
+excluded. All 83 pre-existing non-target product files retained identical checksums.
+Publication/readback/complete canonical validation took 7.97 seconds, peak RSS
+441,024,512 bytes. The 108 retained text responses total 1,366,186 bytes outside Data.
+
+The final full suite passed 218 tests in 11.77 seconds, including all 11 focused
+station tests and rollback coverage. No live Ecology importer was qualified:
+10A040, 07A089, 18B070 and 16A070 remain pending public access/authorized exports.
+DFO pre-2023 archives remain unqualified; 2022 is PDF-based and the 2019 directory
+probe did not parse as a standard ZIP end record. No inferred station equivalence,
+UTC daily reconstruction, discharge refresh or model readiness is claimed.
+
+### Historical temperature extension, same day
+
+The current station companion supersedes the initial checksum above: 217 rows,
+236,185 bytes, SHA256 `66daaa4939c8335f0d75d3ff7a3154bf4e67abe18e14420cc68c28ae37c7de5f`.
+All 101 existing rows and 83 non-target files are preserved. The 116 added distinct
+dates comprise 113 in 2012–2017 and one reviewed date each in 2009–2011. Source row
+NA and duplicate handling are explicit; no other station or interpolated day enters.
+Build/promotion/readback took 10.31 seconds, peak RSS 417,234,944 bytes. Twenty focused
+tests passed, including PDF dates/columns, tamper rejection and duplicate conflicts.
+
+Final historical-extension suite: 227 tests passed in 12.30 seconds; all 20 focused
+station tests also passed after the paired-HTML checksum guard. Diff checks passed.
+
+### Read-only temperature follow-up — 2026-10-28
+
+All 28 English PDF current-temperature tables in the retained official 2019 archive
+were inspected using installed bsdtar and pdftotext; first report visually checked.
+All explicitly name Hope, none Qualark. No observations were imported. Current
+canonical validation passed, with 217 station rows and unchanged SHA256
+`66daaa4939c8335f0d75d3ff7a3154bf4e67abe18e14420cc68c28ae37c7de5f`.
+No Ecology exports were identified by scoped filename search in Downloads, Codex task
+folders or Hydrology delivery. No previously denied Ecology endpoint was retried.
+No behavior changed; the test suite was not rerun for this source qualification note.
+
+
+### 2026-10-28 Ecology original browser export delivery
+
+Normal official browser exports downloaded 2,970,150 bytes total, with no sign-in,
+CAPTCHA, agreement acceptance or automated endpoint bypass. Original ZIPs retained
+outside delivery. New adapter tests cover exact station identity/coordinates,
+water-vs-air and Celsius checks, native PST, leap dates, quality semantics, gaps,
+overlapping water-year files, future cutoff and conflicting duplicates.
+
+Full owner offline suite: **240 passed in 13.21 s** in the installed `orcacast`
+Python environment. The initial restricted-shell run had 239 passes and one
+preflight failure because the configured DATA_DIR appeared unwritable; the same
+suite passed with approved filesystem access. Focused station tests: 33 passed.
+`git diff --check` passed. No USGS/ECCC network pilot or new discharge acquisition.
+
+Transactional publication completed in 8.69 s, readback and preserved-row checks
+passed, and all 83 non-target product files retained their hashes. Current
+station companion: **2,136 rows**, **1,188,065 bytes**, SHA256
+`ed520b383d5223b5263be930185455b1c35fa49368a35dc985a800ece6007a95`.
+Qualark's 217 rows and station metadata remain exact. Added 842 Puyallup and 1,077
+Snohomish daily means; their first-to-last intervals contain 17 and 125 absent
+days respectively. 27 Snohomish values are unchecked (code 140), explicitly flagged.
+No missing/rejected/incomplete day was filled or included as a measurement.
+
+Elwha and Skokomish EIM original exports remain pending a user-specified delivery
+email; no queue request was submitted. Availability counts are not imported
+observations. App code and shared configuration were untouched. Knowledge-vault
+upkeep is handed to the coordinating parent because this worker owns only Hydrology.
+
+### Elwha EIM delivery, 2026-10-28
+
+Final full offline suite: **254 passed in 15.20 s**; focused station suite:
+34 passed. Real-source qualification matched all 39,746 expected CSV records and
+verified 909 provider daily summaries against 48 unique native half-hour readings
+per day. Tests cover leap dates, missing/duplicate timestamps, incompatible units,
+wrong stations, altered values, incomplete/unknown-timezone exclusion and extreme
+occurrence timestamps. No new network acquisition succeeded; user-delivered extracted
+originals resolved the download blocker, and their per-file checksums are retained.
+
+Current companion: **3,045 rows**, **1,251,158 bytes**, SHA256
+`ec07d2b051e99a01ff0ba6b63937eaf94eaff5de22c10b7877244164388b454b`.
+Added 909 Elwha rows over 303 seasonal days, preserving every prior 2,136 row and
+station metadata exactly. All 83 non-target files stayed byte-identical. Locked
+publication, canonical validation and readback passed in 9.28 s. Original pooling
+comments remain explicit; no model-readiness assertion. Skokomish remains pending.
+
+
+### Skokomish delivery, 2026-10-29
+
+Full offline suite **256 passed in13.48s**. Source counts/identity, complete native
+days, statistic values and extrema timestamps verified against retained records.
+Locked publication plus checksum/readback took11.26s. All3,045prior rows and station
+metadata preserved exactly;83non-target files remained byte-identical.
+Current product **5,301rows**, **1,397,734bytes**, SHA256
+`0b53ab51df95498b222ecda883cc7a7514de689b386625f1f0d99283074520ec`.
+Added2,256rows across752seasonal days. No network pilot, app test, or discharge,
+causal or influence rebuild. Source originals and bounded rollback evidence retained.

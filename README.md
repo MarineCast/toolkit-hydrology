@@ -483,3 +483,31 @@ All 48 original river files and the six original influence-factor contributions 
 preserved. The ten-river influence product and both running Explorer endpoints passed
 current-source readback. These results preserve provider-day, retrospective and
 model-ineligibility qualifications; they do not establish physical plume validation.
+
+
+## Lagged causal discharge companion — 2026-10-26
+
+The offline causal companion adds seasonal baselines, percentiles and pulse features
+using only retained prior-day discharge and completed prior-year references. Existing
+retrospective products remain unchanged. See [definitions, timing, storage and limitations](docs/CAUSAL_FEATURES.md).
+
+Independent, sparse temperature stations are delivered through the optional
+[station-temperature companion](docs/STATION_TEMPERATURE.md), with native station
+coordinates and source-qualified observations distinct from representative gauges.
+
+## Retained-input reproduction review
+
+The [2026-10-29 review](docs/REPRODUCIBILITY_REVIEW.md) reproduced all 519,760
+causal discharge rows and 5,301 independent station-temperature observations from
+retained inputs with exact row-level parity. It includes safe replay commands,
+source prerequisites, environment/test evidence and example station maps. This
+does not establish fresh acquisition or reproducibility of every hydrology layer.
+
+The expanded review also reproduced all 844,610 native feature rows and 267,720
+influence factors, with retained warmup inputs required for early rolling features.
+It adds retrospective-feature and H3 influence maps. No strict-UTC H3 final product
+is delivered; upstream acquisition/normalization remains outside this replay.
+
+For user-supplied Ecology exports and exceptional DFO report tables, follow the
+[manual input workflow](docs/MANUAL_INPUTS.md). It documents required original
+files, provider selections, source ledgers, safe validation and current importer limits.

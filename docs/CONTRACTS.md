@@ -435,3 +435,16 @@ daily acquisition. Blocks preserve the exact start/end dates, warmup and paginat
 no averaging or temporal conversion occurs. The 20-year maximum keeps each single
 daily series below the USGS 10,000-row page limit. UTC acquisition requires 1.
 This grouping option does not waive pacing, Retry-After, cache or runtime limits.
+
+
+## Lagged causal discharge companion — 2026-10-26
+
+The offline causal companion adds seasonal baselines, percentiles and pulse features
+using only retained prior-day discharge and completed prior-year references. Existing
+retrospective products remain unchanged. See [definitions, timing, storage and limitations](CAUSAL_FEATURES.md).
+
+## Independent temperature stations — 2026-10-26
+
+`catalog.products.station_temperature` registers the sparse native observation
+companion described in [Station temperature](STATION_TEMPERATURE.md). Its station
+identities and coordinates are separate from the per-river representative gauges.
